@@ -19,9 +19,7 @@ The repository contains three workflow files, each optimized for different GPU V
 
 ## Required Checkpoints Files
 > [!NOTE]
-> All workflows require the custom "rgthree" nodes. \
-> The GGUF workflows also need the additional custom "ComfyUI-GGUF" nodes. \
-> (See below for more details)
+> The workflows may require some custom nodes; see below for more details.
 
 ### "simple_zimage-GGUF.json"
 Works smoothly with 12GB of VRAM or less, it may handle around 8GB as well. \
@@ -65,5 +63,6 @@ The workflows require the following custom nodes: \
 
 ## License
 
-This project is licensed under the Unlicense.
+This project is licensed under the Unlicense license.\
+See the ["LICENSE"](LICENSE) file for details.
 
