@@ -1,10 +1,10 @@
 <div align="center">
 
-# Simple Z-Image Workflow
+# Amazing Z-Image Workflow
 [![Platform](https://img.shields.io/badge/platform%3A-ComfyUI-007BFF)](#)
-[![License](https://img.shields.io/github/license/martin-rizzo/SimpleZImageWorkflow?label=license%3A&color=28A745)](#)
-[![Version](https://img.shields.io/github/v/tag/martin-rizzo/SimpleZImageWorkflow?label=version%3A&color=D07250)](#)
-[![Last](https://img.shields.io/github/last-commit/martin-rizzo/SimpleZImageWorkflow?label=last%20commit%3A)](#)  
+[![License](https://img.shields.io/github/license/martin-rizzo/AmazingZImageWorkflow?label=license%3A&color=28A745)](#)
+[![Version](https://img.shields.io/github/v/tag/martin-rizzo/AmazingZImageWorkflow?label=version%3A&color=D07250)](#)
+[![Last](https://img.shields.io/github/last-commit/martin-rizzo/AmazingZImageWorkflow?label=last%20commit%3A)](#)  
 <img src="img/banner.png" width="75%"></img>
 
 </div>
@@ -23,15 +23,15 @@ A workflow developed while experimenting with [Z-Image-Turbo](https://github.com
 
 The repository contains three workflow files, each optimized for different GPU VRAM capacities:
 
- 1. **"simple_zimage-GGUF.json"**       : Recommended for GPUs with 12GB or less VRAM.
- 2. **"simple_zimage-GGUFSMALL.json"**  : For GPUs with less than 8GB VRAM.
- 3. **"simple_zimage-SAFETENSORS.json"**: Based directly on the ComfyUI example.
+ 1. **"amazing_zimage-GGUF.json"**       : Recommended for GPUs with 12GB or less VRAM.
+ 2. **"amazing_zimage-GGUFSMALL.json"**  : For GPUs with less than 8GB VRAM.
+ 3. **"amazing_zimage-SAFETENSORS.json"**: Based directly on the ComfyUI example.
 
 ## Required Checkpoints Files
 > [!NOTE]
 > The workflows may require some custom nodes; see below for more details.
 
-### "simple_zimage-GGUF.json"
+### "amazing_zimage-GGUF.json"
 Works smoothly with 12GB of VRAM or less, it may handle around 8GB as well. \
 Checkpoints used:
 
@@ -42,7 +42,7 @@ Checkpoints used:
  - __[ae.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/blob/main/split_files/vae/ae.safetensors)__ <sub>(335 MB)</sub>\
    Local Directory: __`ComfyUI/models/vae/`__
 
-### "simple_zimage-GGUFSMALL.json"
+### "amazing_zimage-GGUFSMALL.json"
 Optimized for GPUs with limited VRAM (less than 8GB), though prompt accuracy might be affected. \
 Checkpoints used:
 
@@ -53,7 +53,7 @@ Checkpoints used:
   - __[ae.safetensors](https://huggingface.co/Comfy-Org/z_image_turbo/blob/main/split_files/vae/ae.safetensors)__ <sub>(335 MB)</sub>\
     Local Directory: __`ComfyUI/models/vae/`__
 
-### "simple_zimage-SAFETENSORS.json"
+### "amazing_zimage-SAFETENSORS.json"
 Based directly on the official ComfyUI example, suitable for GPUs with around 12GB of VRAM or more. \
 Checkpoints used:
 
