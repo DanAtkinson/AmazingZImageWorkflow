@@ -1,25 +1,27 @@
 # Simple Z-Image Workflow
 
-A workflow developed while experimenting with z-image, incorporating additional features beyond the base ComfyUI workflow. This repository includes three workflows optimized for different GPU VRAM capacities.
+A workflow developed while experimenting with z-image, incorporating additional features beyond the base ComfyUI workflow.
+This repository includes three workflows optimized for different GPU VRAM capacities.
 
 ## Features
 
-- Predefined styles for experimentation
-- Configured to work with both .safetensors and .gguf formats for adaptable VRAM usage 
-- Additional nodes to enable automatic prompt detection by CivitAI
-- Custom sigma values (personal preference noted for better prompt adherence)
+- Includes some configurable styles for testing and experimentation.
+- Versions in both .safetensors and .gguf formats to support a range of GPUs.
+- Custom sigma values adjusted to my preference (subjectively better prompt adherence).
+- Includes a trick to enable CivitAI automatic prompt detection.
 
 ## Workflow Overview
 
 The repository contains three workflow files, each optimized for different GPU VRAM capacities:
 
-1. simple_zimage-SAFETENSORS.json: Suitable for 8GB+ VRAM
-2. simple_zimage-GGUF.json: Recommended for 4-12GB VRAM 
-3. simple_zimage-GGUFSMALL.json: For systems with less than 8GB VRAM
-
-Each workflow requires the custom "rgthree" node. The GGUF workflows also require the additional "ComfyUI-GGUF" nodes.
+ 1. **simple_zimage-SAFETENSORS.json**: Based directly on the ComfyUI example.
+ 2. **simple_zimage-GGUF.json**       : Recommended for GPUs with 12GB or less VRAM.
+ 3. **simple_zimage-GGUFSMALL.json**  : For GPUs with less than 8GB VRAM.
 
 ## Workflow Files and Checkpoints
+> [!NOTE]
+> All workflows requires the custom "rgthree" nodes.  
+> The GGUF workflows also require the additional "ComfyUI-GGUF" nodes.
 
 ### simple_zimage-SAFETENSORS.json
 Suitable for GPUs with 8GB+ VRAM.
