@@ -1,4 +1,13 @@
+<div align="center">
+
 # Simple Z-Image Workflow
+[![Platform](https://img.shields.io/badge/platform%3A-ComfyUI-007BFF)](#)
+[![License](https://img.shields.io/github/license/martin-rizzo/SimpleZImageWorkflow?label=license%3A&color=28A745)](#)
+[![Version](https://img.shields.io/github/v/tag/martin-rizzo/SimpleZImageWorkflow?label=version%3A&color=D07250)](#)
+[![Last](https://img.shields.io/github/last-commit/martin-rizzo/SimpleZImageWorkflow?label=last%20commit%3A)](#)  
+<img src="img/banner.png" width="75%"></img>
+
+</div>
 
 A workflow developed while experimenting with [Z-Image-Turbo](https://github.com/Tongyi-MAI/Z-Image), incorporating additional features beyond the base ComfyUI workflow. Three versions utilizing different checkpoints optimized for varying GPU VRAM capacities are included.
 
