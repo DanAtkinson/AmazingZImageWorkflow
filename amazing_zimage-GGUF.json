@@ -98,7 +98,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 38,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -178,7 +178,7 @@
         "collapsed": true,
         "pinned": true
       },
-      "order": 29,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -216,43 +216,6 @@
       ]
     },
     {
-      "id": 40,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1480,
-        230
-      ],
-      "size": [
-        450,
-        180
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            139
-          ]
-        }
-      ],
-      "title": "STYLE: Vintage Candid",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "A gritty, candid photograph with dark shadows and vibrant warn colors, captured with a vintage disposable camera, featuring: {$@}"
-      ],
-      "shape": 1
-    },
-    {
       "id": 45,
       "type": "PrimitiveStringMultiline",
       "pos": [
@@ -266,7 +229,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 3,
+      "order": 2,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -303,7 +266,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 4,
+      "order": 3,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -340,7 +303,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 5,
+      "order": 4,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -377,7 +340,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 6,
+      "order": 5,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -414,7 +377,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 7,
+      "order": 6,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -450,7 +413,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 8,
+      "order": 7,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -487,7 +450,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 9,
+      "order": 8,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -651,7 +614,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 30,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -688,7 +651,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 32,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -762,7 +725,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 39,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -799,7 +762,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 34,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -836,7 +799,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 37,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -873,7 +836,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 33,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -910,7 +873,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -952,7 +915,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 20,
+      "order": 34,
       "mode": 0,
       "inputs": [
         {
@@ -990,7 +953,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 24,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -1028,7 +991,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 25,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -1066,7 +1029,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 26,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -1104,7 +1067,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 27,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -1142,7 +1105,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 21,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -1180,7 +1143,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 22,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -1218,7 +1181,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 23,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -1256,7 +1219,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 35,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -1427,47 +1390,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 57,
-      "type": "PrimitiveNode",
-      "pos": [
-        770,
-        820
-      ],
-      "size": [
-        520,
-        440
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 11,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "widget": {
-            "name": "replace"
-          },
-          "links": [
-            95,
-            102
-          ]
-        }
-      ],
-      "title": "PROMPT",
-      "properties": {
-        "Run widget replace on values": false
-      },
-      "widgets_values": [
-        "A woman with short, spiky blonde hair is depicted from the chest up, aiming a large, dark gray firearm. Her hair is tousled and appears to be catching the light. She has blue eyes and shadow on her cheeks. She is wearing a white tank top with one strap visibly off her right shoulder. The firearm she holds is dark gray and appears to be a heavy weapon. A dark ancient castle is visible in the background on the right side. Her attire includes dark, torn shorts and ripped, dark stockings or tights on her legs"
-      ],
-      "color": "#232",
-      "bgcolor": "#353",
-      "shape": 1
-    },
-    {
       "id": 88,
       "type": "Fast Muter (rgthree)",
       "pos": [
@@ -1481,7 +1403,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 36,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -1570,7 +1492,7 @@
         "collapsed": true,
         "pinned": true
       },
-      "order": 12,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1606,7 +1528,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 13,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1644,7 +1566,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 14,
+      "order": 12,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1684,7 +1606,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 15,
+      "order": 13,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1722,7 +1644,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 16,
+      "order": 14,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1760,7 +1682,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 28,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -1807,7 +1729,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 17,
+      "order": 15,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1843,7 +1765,7 @@
         "collapsed": true,
         "pinned": true
       },
-      "order": 31,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -1938,7 +1860,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 18,
+      "order": 16,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1980,7 +1902,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 19,
+      "order": 17,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1991,6 +1913,84 @@
       ],
       "color": "#222",
       "bgcolor": "#000",
+      "shape": 1
+    },
+    {
+      "id": 57,
+      "type": "PrimitiveNode",
+      "pos": [
+        770,
+        820
+      ],
+      "size": [
+        520,
+        440
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "replace"
+          },
+          "links": [
+            95,
+            102
+          ]
+        }
+      ],
+      "title": "PROMPT",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "A woman with short, spiky blonde hair is depicted from the chest up, aiming a large, dark gray firearm. Her hair is tousled and appears to be catching the light. She has blue eyes and shadow on her cheeks. She is wearing a white tank top with one strap visibly off her right shoulder. The firearm she holds is dark gray and appears to be a heavy weapon. A dark ancient castle is visible in the background on the right side. Her attire includes dark, torn shorts and ripped, dark stockings or tights on her legs"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 40,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1480,
+        230
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            139
+          ]
+        }
+      ],
+      "title": "STYLE: Vintage Candid",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "A gritty, candid photograph with dark shadows and vibrant warm colors, captured with a vintage disposable camera, featuring: {$@}"
+      ],
       "shape": 1
     }
   ],
@@ -2487,8 +2487,8 @@
     "ds": {
       "scale": 0.9229599817707048,
       "offset": [
-        -201.93617104987092,
-        -347.9417113294076
+        -204.4366458639304,
+        -351.20797948338594
       ]
     },
     "frontendVersion": "1.30.6"

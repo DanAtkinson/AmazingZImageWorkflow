@@ -98,7 +98,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 38,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -178,7 +178,7 @@
         "collapsed": true,
         "pinned": true
       },
-      "order": 29,
+      "order": 28,
       "mode": 0,
       "inputs": [
         {
@@ -216,43 +216,6 @@
       ]
     },
     {
-      "id": 40,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1480,
-        230
-      ],
-      "size": [
-        450,
-        180
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            139
-          ]
-        }
-      ],
-      "title": "STYLE: Vintage Candid",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "A gritty, candid photograph with dark shadows and vibrant warn colors, captured with a vintage disposable camera, featuring: {$@}"
-      ],
-      "shape": 1
-    },
-    {
       "id": 45,
       "type": "PrimitiveStringMultiline",
       "pos": [
@@ -266,7 +229,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 3,
+      "order": 2,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -303,7 +266,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 4,
+      "order": 3,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -340,7 +303,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 5,
+      "order": 4,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -377,7 +340,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 6,
+      "order": 5,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -414,7 +377,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 7,
+      "order": 6,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -450,7 +413,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 8,
+      "order": 7,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -487,7 +450,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 9,
+      "order": 8,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -651,7 +614,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 32,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -688,7 +651,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 30,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -762,7 +725,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 39,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -799,7 +762,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 31,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -836,7 +799,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 37,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -873,7 +836,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 34,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -910,7 +873,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -952,7 +915,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 20,
+      "order": 34,
       "mode": 0,
       "inputs": [
         {
@@ -990,7 +953,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 24,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -1028,7 +991,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 25,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -1066,7 +1029,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 26,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -1104,7 +1067,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 27,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -1142,7 +1105,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 21,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -1180,7 +1143,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 22,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -1218,7 +1181,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 23,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -1256,7 +1219,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 35,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -1440,7 +1403,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 11,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1481,7 +1444,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 36,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -1570,7 +1533,7 @@
         "collapsed": true,
         "pinned": true
       },
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1606,7 +1569,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 13,
+      "order": 12,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1644,7 +1607,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 28,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -1691,7 +1654,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1727,7 +1690,7 @@
         "collapsed": true,
         "pinned": true
       },
-      "order": 33,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -1822,7 +1785,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 15,
+      "order": 14,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1864,7 +1827,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 16,
+      "order": 15,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1902,7 +1865,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 17,
+      "order": 16,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1942,7 +1905,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 18,
+      "order": 17,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1980,7 +1943,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 19,
+      "order": 18,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1991,6 +1954,43 @@
       ],
       "color": "#222",
       "bgcolor": "#000",
+      "shape": 1
+    },
+    {
+      "id": 40,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1480,
+        230
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            139
+          ]
+        }
+      ],
+      "title": "STYLE: Vintage Candid",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "A gritty, candid photograph with dark shadows and vibrant warm colors, captured with a vintage disposable camera, featuring: {$@}"
+      ],
       "shape": 1
     }
   ],
@@ -2485,10 +2485,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.9229599817707059,
+      "scale": 0.922959981770706,
       "offset": [
-        -203.80720832744623,
-        -348.9740109543731
+        -202.75875726266938,
+        -347.933956382868
       ]
     },
     "frontendVersion": "1.30.6"
