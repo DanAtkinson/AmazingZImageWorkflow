@@ -14,7 +14,6 @@ import os
 import sys
 import json
 import argparse
-from typing import List, Tuple
 from PIL import Image, ImageDraw, ImageFont
 from PIL.PngImagePlugin import PngInfo
 
@@ -39,19 +38,19 @@ PROMPT_TEXT_COLOR = "#333344"
 # Flag to display a warning if a font fails to load
 SHOW_FONT_WARNING = True
 
-# Hex color codes mapped to specific words for visual presentation
+# Hex color codes for different style names
+# (if the style name contains one of these words, use that color)
 COLORS_BY_WORD = {
-    "PHOTO"     : "#dd2525", # Red
-    "PIXEL"     : "#008800", # Green
-    "MILO"      : "#9b00ff", # Purple
-    "INK"       : "#0021d1", # Blue
-    "1GIRL"     : "#f2258a", # Pink
-    "DARKFAN80" : "#4c516c", # Gray
-    "WORKFLOW"  : "#dd2525", # - Red
-    "WORKFLOWS" : "#dd2525", # - Red
+    "PHOTO"     : "#006e18",
+    "NEON"      : "#c900c9",
+    "VINTAGE"   : "#6E3F09",
+    "RETRO"     : "#6E3F09",
 }
-def get_word_color(word: str, default_color: str=None) -> str:
-    return COLORS_BY_WORD.get(word.upper(), default_color)
+def get_text_color(style_name: str, default_color: str=None) -> str:
+    for word, color in COLORS_BY_WORD.items():
+        if word in style_name.upper():
+            return color
+    return default_color
 
 
 #----------------------------- ERROR MESSAGES ------------------------------#
@@ -872,16 +871,17 @@ def get_required_fonts(font_size: int,
     return (label_font, prompt_fonts)
 
 
-def add_label_to_image(image: Image,
-                       text : str,
-                       font : ImageFont,
-                       scale: float = 1.0
-                       ) -> Image:
+def draw_label(image: Image, /,*,
+               text : str,
+               color: str,
+               font : ImageFont,
+               scale: float = 1.0
+               ) -> Image:
     """Adds a label with text to an existing image.
 
     Args:
         image    (Image) : The base image to which labels will be added.
-        text      (str)  : The input text to be written as a label.
+        text       (str) : The input text to be written as a label.
         font  (ImageFont): The font object to use for writing the label.
         scale    (float) : A scaling factor that adjusts the size of the label.
     Returns:
@@ -890,10 +890,9 @@ def add_label_to_image(image: Image,
     # calculate the label size based on the scale provided
     label_width   = int( DEFAULT_LABEL_WIDTH  * scale )
     label_height  = int( DEFAULT_LABEL_HEIGHT * scale )
-    default_color = get_word_color(text, "black")
     return draw_text_label(image,
                            label_width, label_height,
-                           text, default_color, font
+                           text, color, font
                            )
 
 
@@ -944,11 +943,10 @@ def add_label_to_image(image: Image,
 #===========================================================================#
 
 def build_gallery(image_paths: list[str],
-                  grid_size  : tuple[int, int],
-                  scale      : float,
-                  prompt     : str,
                   style_list : list[str],
-                  font_size  : int = DEFAULT_FONT_SIZE
+                  grid_size  : tuple[int, int],
+                  scale      : float = 1.,
+                  prompt     : str   = "",
                   ) -> Image.Image:
     """
     Creates a large image containing multiple PNG images arranged in a grid.
@@ -965,7 +963,7 @@ def build_gallery(image_paths: list[str],
     # TODO: calculate scale based on the cell size
 
     # get the appropriate fonts based on the calculated scale
-    label_font, prompt_fonts = get_required_fonts(font_size, scale=1)
+    label_font, prompt_fonts = get_required_fonts(DEFAULT_FONT_SIZE, scale=1)
 
     # validate grid size
     if len(grid_size) != 2:
@@ -1012,7 +1010,8 @@ def build_gallery(image_paths: list[str],
                 style_name = style_name[6:]
             style_name = style_name.strip()
             print(f" - {style_name}")
-            add_label_to_image(img, text=style_name, font=label_font, scale=1)
+            text_color = get_text_color(style_name, "black")
+            img = draw_label(img, text=style_name, color=text_color, font=label_font, scale=1)
 
         cell_img = img.resize((cell_width, cell_height), Image.LANCZOS)
 
@@ -1148,7 +1147,12 @@ def main(args=None, parent_script=None):
     gallery_index = 0
     for prompt, image_paths in grouped_images.items():
         print(f"\nPrompt: \"{prompt[:40]}...\"")
-        gallery_image = build_gallery(image_paths, (4,3), scale, prompt=prompt, style_list=style_list)
+        gallery_image = build_gallery(image_paths,
+                                      style_list,
+                                      grid_size  = (4,3),
+                                      scale      = scale,
+                                      prompt     = prompt
+                                      )
         gallery_image.save( f"gallery{gallery_index}{extension}", quality=95)
         gallery_index += 1
 
