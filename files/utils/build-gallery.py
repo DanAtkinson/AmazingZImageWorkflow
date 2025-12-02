@@ -29,7 +29,7 @@ DEFAULT_COLOR = '\033[0m'
 DEFAULT_ABOMINABLE_HEIGHT = 1536
 
 # Default font size for labels
-DEFAULT_FONT_SIZE    = 40
+DEFAULT_FONT_SIZE    = 64
 DEFAULT_LABEL_WIDTH  = 512
 DEFAULT_LABEL_HEIGHT = 64
 
@@ -116,6 +116,76 @@ def find_valid_png_images_in_dir(directory: str, valid_prefix: str = "") -> list
     return images
 
 
+def get_node(workflow: dict,
+             /,*,
+             name: str = None,
+             type: str = None
+             ) -> dict[str, any] | None:
+    nodes = workflow.get('nodes', [])
+    for node in nodes:
+        if name and node.get('title','') == name:
+            return node
+        if type and node.get('type','') == type:
+            return node
+    return None
+
+
+
+def get_workflow_from_image(image_path: str) -> dict[str, any] | None:
+    with Image.open(image_path) as image:
+        text_chunks = image.text if hasattr(image,'text') else []
+        workflow    = text_chunks.get('workflow') # text_chunks.get('workflow')
+        if not workflow:
+            return None
+
+    # try to parse the workflow as JSON
+    try:
+        workflow = json.loads(workflow)
+    except:
+        return None
+
+    # workflow must be a dictionary
+    return workflow if isinstance(workflow, dict) else None
+
+
+
+def extract_style_list(image_paths: list[str]) -> list[str] | None:
+    """Extracts the style list from the first image with amazing workflow
+    """
+    for image_path in image_paths:
+        if not os.path.isfile(image_path):
+            continue
+
+        # check if image has a workflow
+        workflow = get_workflow_from_image(image_path)
+        if not workflow: continue
+
+        # search the "node collector (rgthree)"
+        node_collector = get_node(workflow, type="Node Collector (rgthree)")
+        if not isinstance(node_collector, dict): continue
+
+        style_list = []
+
+        # collects the names of each node input
+        input_list = node_collector.get('inputs', [])
+        if not isinstance(input_list, list): continue
+        for input in input_list:
+            name = input.get('name', '')
+            if not name: continue
+            if name.startswith("STYLE:"): name = name[6:]
+            style_list.append( name.strip() )
+
+        # return if any styles were found
+        if len(style_list)>0:
+            return style_list
+
+    # no styles were found at this point
+    return None
+
+
+
+#---------------------------------- FONTS ----------------------------------#
+
 def ascent_diference(font1: ImageFont, font2: ImageFont) -> int:
     """Calculates the difference in ascent between two fonts.
     """
@@ -177,34 +247,6 @@ def select_font_variation(font: ImageFont,
     except:
         return
 
-
-def wrap_text(text: str, font: ImageFont, width: int) -> tuple[list[str], float]:
-    """Splits text into lines that fit within the given width.
-
-    Args:
-        text      (str) : The input text to be split.
-        font (ImageFont): Font used for rendering the text.
-        width     (int) : Maximum width in pixels that each line of text can occupy.
-
-    Returns:
-        A list of lines (strings)
-        and the percentage length of the last line.
-    """
-    words = text.split()
-    lines = []
-    current_line = ""
-    for i, word in enumerate(words):
-        test_line = f"{current_line} {word}" if i>0 else word
-        if font.getlength(test_line) <= width:
-            current_line = test_line
-        else:
-            lines.append(current_line)
-            current_line = word
-    if current_line:
-        lines.append(current_line)
-
-    last_line_percent = 100.0 * len(lines[-1]) / len(lines[0])
-    return lines, last_line_percent
 
 
 def get_abominable_scale(image: Image) -> float:
@@ -526,6 +568,35 @@ class Box(tuple):
 
 #------------------------ COMPLEX DRAWING FUNCTIONS ------------------------#
 
+def wrap_text(text: str, font: ImageFont, width: int) -> tuple[list[str], float]:
+    """Splits text into lines that fit within the given width.
+
+    Args:
+        text      (str) : The input text to be split.
+        font (ImageFont): Font used for rendering the text.
+        width     (int) : Maximum width in pixels that each line of text can occupy.
+
+    Returns:
+        A list of lines (strings)
+        and the percentage length of the last line.
+    """
+    words = text.split()
+    lines = []
+    current_line = ""
+    for i, word in enumerate(words):
+        test_line = f"{current_line} {word}" if i>0 else word
+        if font.getlength(test_line) <= width:
+            current_line = test_line
+        else:
+            lines.append(current_line)
+            current_line = word
+    if current_line:
+        lines.append(current_line)
+
+    last_line_percent = 100.0 * len(lines[-1]) / len(lines[0])
+    return lines, last_line_percent
+
+
 def add_borders(image : Image,
                 left  : int,
                 top   : int,
@@ -562,8 +633,6 @@ def add_borders(image : Image,
     # paste the original image onto the new image at the correct offset
     new_image.paste(image, (left, top))
     return new_image
-
-
 
 
 def write_text_in_box(image  : Image,
@@ -634,50 +703,45 @@ def write_text_in_box(image  : Image,
         return False
 
 
-def draw_two_word_label(image  : Image,
-                        width  : int,
-                        height : int,
-                        word1: str, color1: str, font1: ImageFont,
-                        word2: str, color2: str, font2: ImageFont
-                        ) -> Image:
-    """Draws a rectangle containing two words on an image.
-
-    This function takes an image, two words, and draws a rectangle with
-    a white background containing the two words centered within it.
-    The rectangle is drawn in the bottom right corner of the image.
+def draw_text_label(image  : Image,
+                    width  : int,
+                    height : int,
+                    text   : str,
+                    color  : str,
+                    font   : ImageFont,
+                    ) -> Image:
+    """Draws a rectangle containing the given text in the specified image.
 
     Args:
         image    (Image) : The original image to be labeled.
         width     (int)  : The width of the label rectangle.
         height    (int)  : The height of the label rectangle.
-        word1     (str)  : The first word of the label.
-        color1    (str)  : The color of the first word.
-        font1 (ImageFont): The font used for the first word.
-        word2     (str)  : The second word of the label.
-        color2    (str)  : The color of the second word.
-        font2 (ImageFont): The font used for the second word.
-
+        text      (str)  : The text to be displayed in the label.
+        color     (str)  : The color of the text.
+        font  (ImageFont): The font used for rendering the text.
     Returns:
         PIL.Image: The image with the label added.
     """
     image_width, image_height = image.size
-    unit = Box.bounding_for_text('m', font1).width
-    space_width = 0.2 * unit # space between the two words
-    margin      = 1   * unit # minimum margin between the border and the text
+    unit   = Box.container_for_text('m', font).width
+    margin = 1 * unit # minimum margin between the border and the text
 
     draw = ImageDraw.Draw(image)
 
-    # calculate the space occupied by the two words
-    word1_box = Box.container_for_text(word1, font1)
-    word2_box = Box.container_for_text(word2, font2)
-    total_width  = word1_box.width + word2_box.width + space_width
-    total_height = max(word1_box.height, word2_box.height)
-    total_box    = Box(0,0, total_width, total_height)
+    # calculate the space occupied by the text
+    text_box   = Box.container_for_text(text, font)
+    min_width  = text_box.width  + margin
+    min_height = text_box.height + margin/2
 
-    # adjust the size of the rectangle to contain the two words
-    minimum_width = margin + total_width + margin
-    if width < minimum_width:
-        width = minimum_width
+    if width < min_width:
+        width = min_width
+    if height < min_height:
+        height = min_height
+
+    ## adjust the size of the rectangle to contain the two words
+    #minimum_width = margin + total_box.width + margin
+    #if width < minimum_width:
+    #    width = minimum_width
 
     # draw the white rectangle
     radius    = height/3 # radius of the rectangle's corner
@@ -689,26 +753,18 @@ def draw_two_word_label(image  : Image,
     draw.ellipse(  circlebox, fill="white")
 
     # center both words within the whitebox
-    total_box = total_box.centered_in( whitebox1.moved_by(-radius/2,0) )
-
-    # position word1 to the left of `total_box` and word2 to the right
-    word1_box = word1_box.moved_to( total_box.left, total_box.top, anchor='lt')
-    word2_box = word2_box.moved_to( total_box.right, total_box.top, anchor='rt')
-
-    # align word1 with word2 since they have different font sizes
-    word1_box = word1_box.moved_by(0, ascent_diference(font2, font1))
+    text_box = text_box.centered_in( whitebox1.moved_by(-radius/2,0) )
 
     # write the words and return the image
-    draw.text(word1_box, word1, fill=color1, font=font1, anchor='la')
-    draw.text(word2_box, word2, fill=color2, font=font2, anchor='la')
+    draw.text(text_box, text, fill=color, font=font, anchor='la')
     return image
 
 
-#----------------------- WLABEL RENDERING FUNCTIONS ------------------------#
+#------------------------ LABEL RENDERING FUNCTIONS ------------------------#
 
-def get_all_required_fonts(font_size: int,
-                           scale    : float = 1.0
-                           ) -> tuple:
+def get_required_fonts(font_size: int,
+                       scale    : float = 1.0
+                       ) -> tuple:
     """Loads all the fonts required for rendering text.
 
     Args:
@@ -716,150 +772,124 @@ def get_all_required_fonts(font_size: int,
         scale   (float): A multiplier to adjust the size of the loaded
                          fonts, default is 1.0 which means no scaling.
     Returns:
-        A tuple containing three elements:
-            - font_w1: The font used to write the first word on the label.
-            - font_w2: The font used to write the second word on the label.
+        A tuple containing two elements:
+            - label_font  : The font used to write the label.
             - prompt_fonts: A list of additional fonts in different sizes used to write the prompt.
     """
     script_dir, script_name = os.path.split( os.path.abspath(__file__) )
-    font_dir = os.path.join(script_dir, os.path.splitext(script_name)[0] + "-font")
+    font_folder = os.path.splitext(script_name)[0] + "-font"
+    font_folder = "fonts"
+    font_full_dir = os.path.join(script_dir, font_folder)
 
     # if the font directory does not exist, return immediately
-    if not os.path.exists(font_dir):
+    if not os.path.exists(font_full_dir):
         return None
 
     # search through the font directory for TTF files
     opensans_ttf_file   = None
     robotoslab_ttf_file = None
     default_ttf_file    = None
-    for filename in os.listdir(font_dir):
+    for filename in os.listdir(font_full_dir):
         filename_lower = filename.lower()
         if not filename_lower.endswith(".ttf"):
             continue
         elif 'opensans' in filename_lower:
-              opensans_ttf_file = os.path.join(font_dir, filename)
+              opensans_ttf_file = os.path.join(font_full_dir, filename)
         elif 'robotoslab' in filename_lower:
-              robotoslab_ttf_file = os.path.join(font_dir, filename)
+              robotoslab_ttf_file = os.path.join(font_full_dir, filename)
         elif default_ttf_file is None:
-             default_ttf_file = os.path.join(font_dir, filename)
+             default_ttf_file = os.path.join(font_full_dir, filename)
 
     # load the fonts based on what was found
     label_ttf_file   = robotoslab_ttf_file or default_ttf_file
     prompt_ttf_file  = opensans_ttf_file   or default_ttf_file
 
-    font_w1      = load_font(label_ttf_file, int(font_size * scale * 1.0) )
-    font_w2      = load_font(label_ttf_file, int(font_size * scale * 1.1) )
+    label_font   = load_font(label_ttf_file, int(font_size * scale * 1.0) )
     prompt_fonts = [load_font(prompt_ttf_file, size) for size in range(int(font_size * scale * 1.3), 10, -2)]
 
-    select_font_variation(font_w1, b'ExtraBold', b'Black', b'Bold')
-    select_font_variation(font_w2, b'ExtraBold', b'Black', b'Bold')
+    select_font_variation(label_font, b'ExtraBold', b'Black', b'Bold')
     for font in prompt_fonts:
         select_font_variation(font, b'Regular', b'Medium')
 
-    return (font_w1, font_w2, prompt_fonts)
+    return (label_font, prompt_fonts)
 
 
 def add_label_to_image(image: Image,
                        text : str,
-                       font1: ImageFont,
-                       font2: ImageFont,
+                       font : ImageFont,
                        scale: float = 1.0
                        ) -> Image:
-    """Adds a label with two words to the image.
+    """Adds a label with text to an existing image.
 
     Args:
         image    (Image) : The base image to which labels will be added.
-        text      (str)  : The input text from which two words will be extracted and used for labeling.
-        font1 (ImageFont): The font object to use for the first word in the label.
-        font2 (ImageFont): The font object to use for the second word in the label.
+        text      (str)  : The input text to be written as a label.
+        font  (ImageFont): The font object to use for writing the label.
         scale    (float) : A scaling factor that adjusts the size of the label.
-
     Returns:
         The modified image with the labels added.
     """
-
     # calculate the label size based on the scale provided
-    label_width  = int( DEFAULT_LABEL_WIDTH  * scale )
-    label_height = int( DEFAULT_LABEL_HEIGHT * scale )
-
-    # extract the first two words from the provided text
-    if ' ' in text:
-        words = text.split(' ', 2)
-    elif '_' in text:
-        words = text.split('_', 2)
-    elif '-' in text:
-        words = text.split('-', 2)
-    else:
-        words = text
-    word1  = words[0] if len(words)>=1 else '???'
-    word2  = words[1] if len(words)>=2 else '???'
-
-    # determine the color for each word based on predefined rules
-    color1 = get_word_color(word1, "black")
-    color2 = get_word_color(word2, "red"  )
-
-    # add a label with both words to the image
-    labeled_image = draw_two_word_label(image,
-                                        label_width,
-                                        label_height,
-                                        word1, color1, font1,
-                                        word2, color2, font2 )
-    return labeled_image
+    label_width   = int( DEFAULT_LABEL_WIDTH  * scale )
+    label_height  = int( DEFAULT_LABEL_HEIGHT * scale )
+    default_color = get_word_color(text, "black")
+    return draw_text_label(image,
+                           label_width, label_height,
+                           text, default_color, font
+                           )
 
 
-def add_prompt_to_image(image : Image,
-                        prompt: str,
-                        fonts : [ImageFont],
-                        scale : float = 1.0
-                        ) -> Image:
-    """Adds a text prompt to the image at the top.
-
-    This function takes an image and adds a text prompt at the top of the image.
-    The prompt is split into multiple lines if it exceeds the width of the image.
-
-    Args:
-        image      (Image) : The base image to which prompts will be added.
-        prompt      (str)  : The text string containing the prompt to be displayed.
-        fonts ([ImageFont]): A list of fonts in decreasing order of size for
-                             rendering the text. The function will attempt to
-                             use the appropriate font size (not implemented)
-        scale      (float) : A scaling factor that adjusts the size of the prompt.
-
-    Returns:
-        The modified image with the prompt added.
-    """
-    width, _ = image.size
-    box = Box(0,0, int(width), int(200*scale))
-
-    # add a border on top of the image
-    # and write the prompt inside the defined box area
-    image = add_borders(image, 0, box.height, 0, 0, 'white')
-
-    # va recorriendo todos los fonts hasta que encuentra un font
-    # que hace que el texto entre completo dentro del box
-    for i, font in enumerate(fonts):
-        is_last = ( i == len(fonts)-1 )
-        fit = write_text_in_box(image,
-                                box.shrunken(16,8),
-                                prompt,
-                                font,
-                                spacing = 0,
-                                align   = 'center',
-                                color   = PROMPT_TEXT_COLOR,
-                                force   = is_last
-                                )
-        if fit:
-            break
-    return image
+# def add_prompt_to_image(image : Image,
+#                         prompt: str,
+#                         fonts : [ImageFont],
+#                         scale : float = 1.0
+#                         ) -> Image:
+#     """Adds a text prompt to the image at the top.
+#
+#     Args:
+#         image      (Image) : The base image to which prompts will be added.
+#         prompt      (str)  : The text string containing the prompt to be displayed.
+#         fonts ([ImageFont]): A list of fonts in decreasing order of size for
+#                              rendering the text. The function will attempt to
+#                              use the appropriate font size (not implemented)
+#         scale      (float) : A scaling factor that adjusts the size of the prompt.
+#     Returns:
+#         The modified image with the prompt added.
+#     """
+#     width, _ = image.size
+#     box = Box(0,0, int(width), int(200*scale))
+#
+#     # add a border on top of the image
+#     # and write the prompt inside the defined box area
+#     image = add_borders(image, 0, box.height, 0, 0, 'white')
+#
+#     # va recorriendo todos los fonts hasta que encuentra un font
+#     # que hace que el texto entre completo dentro del box
+#     for i, font in enumerate(fonts):
+#         is_last = ( i == len(fonts)-1 )
+#         fit = write_text_in_box(image,
+#                                 box.shrunken(16,8),
+#                                 prompt,
+#                                 font,
+#                                 spacing = 0,
+#                                 align   = 'center',
+#                                 color   = PROMPT_TEXT_COLOR,
+#                                 force   = is_last
+#                                 )
+#         if fit:
+#             break
+#     return image
 
 
 #===========================================================================#
 #////////////////////////////////// MAIN ///////////////////////////////////#
 #===========================================================================#
 
-def build_gallery(image_paths: List[str],
-                  grid_size : Tuple[int, int],
-                  scale     : float
+def build_gallery(image_paths: list[str],
+                  grid_size  : tuple[int, int],
+                  scale      : float,
+                  style_list : list[str],
+                  font_size  : int = DEFAULT_FONT_SIZE
                   ) -> Image.Image:
     """
     Creates a large image containing multiple PNG images arranged in a grid.
@@ -872,6 +902,11 @@ def build_gallery(image_paths: List[str],
         A PIL.Image containing all input images arranged in a grid
     """
     number_of_images = len(image_paths)
+
+    # TODO: calculate scale based on the cell size
+
+    # get the appropriate fonts based on the calculated scale
+    label_font, prompt_fonts = get_required_fonts(font_size, scale=1)
 
     # validate grid size
     if len(grid_size) != 2:
@@ -903,12 +938,15 @@ def build_gallery(image_paths: List[str],
     gallery_height  = cell_height * rows
     gallery_image = Image.new('RGB', (gallery_width, gallery_height), color='black')
 
-
     # place images in grid
     for i, path in enumerate(image_paths):
 
         # load and resize the image to fit the cell size
-        img      = Image.open(path)
+        img = Image.open(path)
+        if i < len(style_list):
+            print(f"Labeling style: {style_list[i]}")
+            add_label_to_image(img, text=style_list[i], font=label_font, scale=1)
+
         cell_img = img.resize((cell_width, cell_height), Image.LANCZOS)
 
         # calculate the position of the cell within the grid
@@ -1034,8 +1072,10 @@ def main(args=None, parent_script=None):
     if not images:
         fatal_error("No images found.")
 
+    style_list = extract_style_list(images);
+
     # generate the gallery image and save it
-    gallery_image = build_gallery(images, (4,3), scale)
+    gallery_image = build_gallery(images, (4,3), scale, style_list=style_list)
     gallery_image.save( f"gallery{extension}", quality=95)
 
 
