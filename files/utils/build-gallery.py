@@ -17,23 +17,13 @@ import argparse
 from PIL import Image, ImageDraw, ImageFont
 from PIL.PngImagePlugin import PngInfo
 
-# ANSI escape codes for colored terminal output
-RED    = '\033[91m'
-GREEN  = '\033[92m'
-YELLOW = '\033[93m'
-CYAN   = '\033[96m'
-DEFAULT_COLOR = '\033[0m'
-
-# Default height value used for an abominable image
-DEFAULT_ABOMINABLE_HEIGHT = 1536
-
-# Default font size for labels
+# Default label metrics
 DEFAULT_FONT_SIZE    = 64
 DEFAULT_LABEL_WIDTH  = 512
 DEFAULT_LABEL_HEIGHT = 64
 
-# Color used for prompt text
-PROMPT_TEXT_COLOR = "#333344"
+## Color used for prompt text
+#PROMPT_TEXT_COLOR = "#333344"
 
 # Flag to display a warning if a font fails to load
 SHOW_FONT_WARNING = True
@@ -53,28 +43,35 @@ def get_text_color(style_name: str, default_color: str=None) -> str:
     return default_color
 
 
+# ANSI escape codes for colored terminal output
+RED    = '\033[91m'
+GREEN  = '\033[92m'
+YELLOW = '\033[93m'
+CYAN   = '\033[96m'
+DKGRAY = '\033[90m'
+RESET  = '\033[0m'
+
 #----------------------------- ERROR MESSAGES ------------------------------#
 
-def message(text: str) -> None:
-    """Displays and logs a regular message to the standard error stream.
-    """
-    print(f"  {GREEN}>{DEFAULT_COLOR} {text}", file=sys.stderr)
+def disable_colors():
+    global RED, GREEN, YELLOW, CYAN, DKGRAY, RESET
+    RED, GREEN, YELLOW, CYAN, DKGRAY, RESET = "", "", "", "", "", ""
 
 def warning(message: str, *info_messages: str) -> None:
     """Displays and logs a warning message to the standard error stream.
     """
-    print(f"{CYAN}[{YELLOW}WARNING{CYAN}]{YELLOW} {message}{DEFAULT_COLOR}", file=sys.stderr)
-    for info_message in info_messages:
-        print(f"          {YELLOW}{info_message}{DEFAULT_COLOR}", file=sys.stderr)
     print()
+    print(f"{CYAN}[{YELLOW}WARNING{CYAN}]{RESET} {message}", file=sys.stderr)
+    for info_message in info_messages:
+        print(f"          {YELLOW}{info_message}{RESET}", file=sys.stderr)
 
 def error(message: str, *info_messages: str) -> None:
     """Displays and logs an error message to the standard error stream.
     """
-    print(f"{CYAN}[{RED}ERROR{CYAN}]{RED} {message}{DEFAULT_COLOR}", file=sys.stderr)
-    for info_message in info_messages:
-        print(f"          {RED}{info_message}{DEFAULT_COLOR}", file=sys.stderr)
     print()
+    print(f"{CYAN}[{RED}ERROR{CYAN}]{RESET} {message}", file=sys.stderr)
+    for info_message in info_messages:
+        print(f"          {RED}{info_message}{RESET}", file=sys.stderr)
 
 def fatal_error(message: str, *info_messages: str) -> None:
     """Displays and logs an fatal error to the standard error stream and exits.
@@ -84,9 +81,9 @@ def fatal_error(message: str, *info_messages: str) -> None:
     """
     error(message)
     for info_message in info_messages:
-        print(f" {CYAN}\u24d8  {info_message}{DEFAULT_COLOR}", file=sys.stderr)
+        print(f" {CYAN}\u24d8  {info_message}{RESET}", file=sys.stderr)
+    print()
     exit(1)
-
 
 #--------------------------------- HELPERS ---------------------------------#
 
@@ -117,6 +114,14 @@ def find_valid_png_images_in_dir(directory: str, valid_prefix: str = "") -> list
 
 def get_node(workflow: dict, /,*, title: str = None, type : str = None
              ) -> dict[str, any] | None:
+    """Retrieve a node from the workflow based on specified criteria.
+    Args:
+        workflow        : The workflow dictionary to search.
+        title (optional): The title of the desired node.
+        type_ (optional): The type of the desired node.
+    Returns:
+        A dictionary with the desired node's details if found, otherwise None.
+    """
     nodes = workflow.get('nodes', [])
     for node in nodes:
         if title and node.get('title','') == title:
@@ -127,6 +132,14 @@ def get_node(workflow: dict, /,*, title: str = None, type : str = None
 
 def is_node_enabled(workflow: dict, /,*, title: str = None, type : str = None
                     ) -> bool | None:
+    """Check if a specified node in the workflow is enabled.
+    Args:
+        workflow        : The workflow dictionary to search.
+        title (optional): The title of the desired node.
+        type_ (optional): The type of the desired node.
+    Returns:
+        True if the node is enabled, False if it's disabled, or None if not found.
+    """
     node = get_node(workflow, title=title, type=type)
     if not isinstance(node, dict):
         return None
@@ -136,6 +149,12 @@ def is_node_enabled(workflow: dict, /,*, title: str = None, type : str = None
 
 
 def get_workflow_from_image(image_path: str) -> dict[str, any] | None:
+    """Extract the workflow data from a given PNG image.
+    Args:
+        image_path: The path to the PNG image containing workflow data.
+    Returns:
+        The extracted workflow dictionary if successful, otherwise None.
+    """
     with Image.open(image_path) as image:
         text_chunks = image.text if hasattr(image,'text') else []
         workflow    = text_chunks.get('workflow') # text_chunks.get('workflow')
@@ -150,7 +169,6 @@ def get_workflow_from_image(image_path: str) -> dict[str, any] | None:
 
     # workflow must be a dictionary
     return workflow if isinstance(workflow, dict) else None
-
 
 
 def extract_style_list(image_paths: list[str]) -> list[str] | None:
@@ -190,14 +208,11 @@ def group_images_by_prompt_and_style(image_paths: list[str],
                                      ) -> dict[str, list[str]]:
     """
     Groups images by their prompt and style.
-
     Args:
-        image_paths (list[str]): A list of file paths to the images.
-        style_list (list[str]) : A list with the names of the available styles.
-
+        image_paths: A list of file paths to the images.
+        style_list : A list with the names of the available styles.
     Returns:
-        dict[str, list[str]]: A dictionary where keys are prompts and values
-                              are lists containing image paths.
+        A dictionary where keys are prompts and values are lists containing image paths.
     """
     image_styles_by_prompt = { }
 
@@ -209,16 +224,18 @@ def group_images_by_prompt_and_style(image_paths: list[str],
         workflow = get_workflow_from_image(image_path)
         if not workflow: continue
 
-        # TODO: get the prompt of the image
-        image_prompt = "???"
+        # default values when the prompt or style are not found in the image
+        image_prompt = "??"
         style_index  = -1
 
+        # try to extract the prompt from the current image
         prompt_node = get_node(workflow, title="PROMPT")
         if isinstance(prompt_node, dict):
             values = prompt_node.get('widgets_values')
             if isinstance(values, list) and len(values)>0:
                 image_prompt = values[0]
 
+        # try to find out which style is enabled on the current image
         for i, style_name in enumerate(style_list):
             if is_node_enabled(workflow, title=style_name):
                 style_index = i
@@ -242,14 +259,6 @@ def group_images_by_prompt_and_style(image_paths: list[str],
 
 
 #---------------------------------- FONTS ----------------------------------#
-
-def ascent_diference(font1: ImageFont, font2: ImageFont) -> int:
-    """Calculates the difference in ascent between two fonts.
-    """
-    ascent1, _ = font1.getmetrics()
-    ascent2, _ = font2.getmetrics()
-    return ascent1 - ascent2
-
 
 def load_font(filepath: str, font_size: int) -> ImageFont:
     """Attempts to load a font from the specified file.
@@ -303,96 +312,6 @@ def select_font_variation(font: ImageFont,
             font.set_variation_by_axes(variation_alt2)
     except:
         return
-
-
-
-def get_abominable_scale(image: Image) -> float:
-    """Calculates the scale factor for an abominable image.
-    Args:
-        image (PIL.Image): The image to be scaled.
-    Returns:
-        float: The scale factor for the abominable image.
-    """
-    image_width, image_height = image.size
-    if image_width>image_height:
-        image_width, image_height = image_height, image_width
-    return image_height/DEFAULT_ABOMINABLE_HEIGHT
-
-
-def filter_words(words: list) -> list:
-    """Removes words from a list that do not start with an alphanumeric character.
-    Args:
-        word_list: A list of strings representing words.
-    Returns:
-        A new list containing only the words that start with an alphanumeric character.
-    """
-    filtered_words = []
-    for word in words:
-        if word and word[0].isalnum():
-            filtered_words.append(word)
-    return filtered_words
-
-
-def get_workflow_name(workflow_json: str) -> str:
-    """Extracts the workflow name from a JSON
-    Args:
-        workflow_json: A JSON string containing workflow data.
-    Returns:
-        The title of the maint group in the workflow.
-    """
-    try:
-        name          = 'abominable workflow'
-        name_distance = 100000
-
-        workflow = json.loads(workflow_json)
-        groups = workflow.get('groups', [])
-        for group in groups:
-            title    = group.get('title')
-            bounding = group.get('bounding')
-            if not isinstance(title, str) or not isinstance(bounding, list):
-                continue
-            if len(bounding)<2:
-                continue
-            if bounding[0]+bounding[1] < name_distance:
-                name_distance = bounding[0]+bounding[1]
-                name          = title
-        name_words = name.split()
-        return ' '.join( filter_words(name_words) )
-
-    except Exception:
-        return 'invalid workflow'
-
-
-def get_prompt_text(workflow_json: str) -> str:
-    """Extracts the prompt text from a JSON string
-    Args:
-        workflow_json (str): A JSON string containing workflow data.
-    Returns:
-        The text of the prompt node in the workflow.
-    """
-    prompt = None
-    max_distance = 1000
-
-    workflow = json.loads(workflow_json)
-    nodes = workflow.get('nodes', [])
-    for node in nodes:
-
-        title = node.get('title','')
-        pos   = node.get('pos')
-        if isinstance(pos, dict):
-            distance = pos.get('0',0) + pos.get('1',0)
-        elif isinstance(pos, list):
-            distance = pos[0] + pos[1]
-        else:
-            distance = max_distance
-
-        if distance<max_distance and title.lower() == 'prompt':
-            widgets_values = node.get('widgets_values')
-            if isinstance(widgets_values, list):
-                prompt = widgets_values[0]
-                max_distance = distance
-
-    return prompt
 
 
 def save_image(filepath        : str,
@@ -1026,65 +945,6 @@ def build_gallery(image_paths: list[str],
         gallery_image.paste(cell_img, (cell_width*col+xoffset, cell_height*row))
 
     return gallery_image
-
-
-
-def process_image(image         : Image,
-                  workflow_json : str,
-                  font_size     : int   = DEFAULT_FONT_SIZE,
-                  write_prompt  : bool  = False,
-                  write_label   : bool  = True,
-                  label_text    : str   = None,
-                  output_scale  : float = None,
-                  ) -> Image:
-    """Process an image by adding labels based on a given workflow.
-
-    Args:
-        image        (Image): The base image to process and label.
-        workflow_json (str) : The comfyui workflow in JSON format.
-        font_size     (int) : Approximate font size used to label the image. Defaults to DEFAULT_FONT_SIZE
-        write_prompt  (bool): If True, the original prompt text will be written at the top of the image.
-        write_label   (bool): If True, a label with two words will be drawn in the corner of the image.
-        label_text    (str) : If provided, this text will be used as the label.
-        output_scale (float): Scaling factor for resizing the final image;
-                              a value of 1.0 (or None) means no scaling, defaults to None.
-    Returns:
-        The processed image with the labels added.
-    """
-    output_image = image
-
-    # determine the workflow name if label_text is not provided
-    if not label_text:
-        label_text = get_workflow_name(workflow_json)
-
-    # calculate the scale factor based on the original image size
-    # and the size of a normal "abominable" image
-    draw_scale = get_abominable_scale(image)
-
-    # get the appropriate fonts based on the calculated scale
-    font_w1, font_w2, prompt_fonts = get_all_required_fonts(font_size, scale=draw_scale)
-
-    # add a label to the bottom right of the image indicating the workflow name
-    if write_label:
-        output_image = add_label_to_image(image, label_text, font_w1, font_w2, scale=draw_scale)
-
-    # optionally, write the original prompt text on the image
-    if write_prompt:
-        prompt = get_prompt_text(workflow_json)
-        if prompt is not None:
-            prompt = '"' + prompt + '"'
-        else:
-            prompt = "<no prompt found>"
-        output_image = add_prompt_to_image(output_image, prompt, prompt_fonts, scale=draw_scale)
-
-    # resize the final image if any output scaling was requested
-    if output_scale:
-        _width, _height = output_image.size
-        _size = ( int(output_scale*_width), int(output_scale*_height) )
-        output_image = output_image.resize( _size, Image.Resampling.LANCZOS )
-
-    return output_image
-
 
 
 #===========================================================================#
