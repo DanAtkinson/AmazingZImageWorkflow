@@ -33,8 +33,9 @@ SHOW_FONT_WARNING = True
 COLORS_BY_WORD = {
     "PHOTO"     : "#006e18",
     "NEON"      : "#c900c9",
-    "VINTAGE"   : "#6E3F09",
+    "VINTAGE"   : "#834C0D",
     "RETRO"     : "#6E3F09",
+    "B&W"       : "#5F5F5F",
 }
 def get_text_color(style_name: str, default_color: str=None) -> str:
     for word, color in COLORS_BY_WORD.items():
