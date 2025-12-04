@@ -1,5 +1,5 @@
 {
-  "id": "46baa3c4-1d4c-4204-8064-f3f5671f2a73",
+  "id": "5b1925c4-10a9-4f49-84c6-9c2edf37c3f5",
   "revision": 0,
   "last_node_id": 127,
   "last_link_id": 357,
@@ -99,7 +99,7 @@
         "collapsed": true,
         "pinned": true
       },
-      "order": 40,
+      "order": 49,
       "mode": 0,
       "inputs": [
         {
@@ -133,7 +133,7 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "A young woman, cosplaying as Indiana Jones, is seen fleeing, staring at the camera with a terrified expression, her eyes wide. She wears a brown fedora with a crumpled crown and brim. Her outfit includes a short-sleeved tan shirt, a brown leather belt cinched at the waist, and khaki pants. She carries a brown leather satchel slung across her left hip. Behind her, a huge, heavy bowling ball, reminiscent of a rolling boulder trap, rolls by, seemingly about to crush her."
+        "A woman with fair skin and dark, tousled hair pulled back from her face, is depicted holding a large, ornate sword across her shoulders, looking directly at the camera with a sexy expression and a sarcastic smile. Her eyes are wide and appear to be a light color, framed by dark, dramatic eye makeup. Her lips are painted black. Her right arm is visibly robotic, composed of metallic segments, wires, and tubing, with a metallic hand. Her left arm is partially obscured by the sword's hilt and shoulder strap of her vest, but also shows similar mechanical elements emerging from her shoulder and extending down her arm.\n\nShe wears a black, sleeveless tactical vest with multiple straps and buckles. A rectangular patch with the word \"Z-IMAGE\" in gold lettering is attached to the front of the vest, and beneath it, another patch displays \"Q5_K_S\" in red lettering. Beneath the vest, her torso is encased in a complex assembly of black tubes and metallic joints, suggesting a cybernetic torso. She wears dark, loose-fitting cargo pants cinched at the waist with a black belt. The pants have multiple pockets and straps. The sword she holds is large and appears to be made of dark metal with intricate, gold-colored detailing on the hilt and guard."
       ]
     },
     {
@@ -298,7 +298,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 54,
+      "order": 56,
       "mode": 0,
       "inputs": [
         {
@@ -335,7 +335,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 56,
+      "order": 59,
       "mode": 0,
       "inputs": [
         {
@@ -372,7 +372,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 32,
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
@@ -465,7 +465,7 @@
         "Node name for S&R": "CLIPLoaderGGUF"
       },
       "widgets_values": [
-        "Qwen3-4B.i1-Q5_K_M.gguf",
+        "Qwen3-4B.i1-Q5_K_S.gguf",
         "lumina2"
       ],
       "color": "#322",
@@ -548,158 +548,6 @@
       "shape": 1
     },
     {
-      "id": 13,
-      "type": "EmptySD3LatentImage",
-      "pos": [
-        760,
-        700
-      ],
-      "size": [
-        260,
-        120
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "slot_index": 0,
-          "links": [
-            207
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "EmptySD3LatentImage"
-      },
-      "widgets_values": [
-        944,
-        1408,
-        1
-      ]
-    },
-    {
-      "id": 106,
-      "type": "Node Collector (rgthree)",
-      "pos": [
-        760,
-        860
-      ],
-      "size": [
-        260,
-        70
-      ],
-      "flags": {},
-      "order": 34,
-      "mode": 0,
-      "inputs": [
-        {
-          "dir": 3,
-          "name": "Euler [ NOISY ]",
-          "type": "*",
-          "link": 284
-        },
-        {
-          "dir": 3,
-          "name": "Euler Ancestral [ SOFT ]",
-          "type": "*",
-          "link": 285
-        },
-        {
-          "dir": 3,
-          "name": "",
-          "type": "*",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "dir": 4,
-          "name": "Output",
-          "type": "*",
-          "links": [
-            291
-          ]
-        }
-      ],
-      "properties": {}
-    },
-    {
-      "id": 95,
-      "type": "KSamplerSelect",
-      "pos": [
-        430,
-        510
-      ],
-      "size": [
-        270,
-        80
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 2,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "SAMPLER",
-          "type": "SAMPLER",
-          "links": [
-            259,
-            285
-          ]
-        }
-      ],
-      "title": "Euler Ancestral [ SOFT ]",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "KSamplerSelect"
-      },
-      "widgets_values": [
-        "euler_ancestral"
-      ]
-    },
-    {
-      "id": 68,
-      "type": "KSamplerSelect",
-      "pos": [
-        430,
-        400
-      ],
-      "size": [
-        270,
-        70
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "SAMPLER",
-          "type": "SAMPLER",
-          "links": [
-            258,
-            284
-          ]
-        }
-      ],
-      "title": "Euler [ NOISY ]",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "KSamplerSelect"
-      },
-      "widgets_values": [
-        "euler"
-      ]
-    },
-    {
       "id": 67,
       "type": "SamplerCustom",
       "pos": [
@@ -776,7 +624,7 @@
       },
       "widgets_values": [
         true,
-        1,
+        2,
         "fixed",
         1
       ]
@@ -795,7 +643,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 57,
+      "order": 58,
       "mode": 0,
       "inputs": [
         {
@@ -849,7 +697,7 @@
       },
       "widgets_values": [
         "enable",
-        1,
+        2,
         "randomize",
         8,
         1,
@@ -859,94 +707,6 @@
         10000,
         "disable"
       ]
-    },
-    {
-      "id": 58,
-      "type": "PrimitiveNode",
-      "pos": [
-        1640,
-        670
-      ],
-      "size": [
-        250,
-        130
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 9,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "widget": {
-            "name": "noise_seed"
-          },
-          "links": [
-            85,
-            193
-          ]
-        }
-      ],
-      "title": "SEED",
-      "properties": {
-        "Run widget replace on values": false
-      },
-      "widgets_values": [
-        1,
-        "fixed"
-      ],
-      "color": "#432",
-      "bgcolor": "#653",
-      "shape": 1
-    },
-    {
-      "id": 88,
-      "type": "Fast Muter (rgthree)",
-      "pos": [
-        1280,
-        840
-      ],
-      "size": [
-        350,
-        390
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 64,
-      "mode": 0,
-      "inputs": [
-        {
-          "dir": 3,
-          "name": "STYLE: Lo-fi Mobile Photo",
-          "type": "*",
-          "link": 287
-        },
-        {
-          "dir": 3,
-          "name": "",
-          "type": "*",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "dir": 4,
-          "name": "OPT_CONNECTION",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "title": "STYLE SELECTOR",
-      "properties": {
-        "toggleRestriction": "max one"
-      },
-      "color": "#232",
-      "bgcolor": "#353",
-      "shape": 1
     },
     {
       "id": 92,
@@ -962,8 +722,8 @@
       "flags": {
         "pinned": true
       },
-      "order": 10,
-      "mode": 2,
+      "order": 6,
+      "mode": 0,
       "inputs": [],
       "outputs": [
         {
@@ -986,31 +746,6 @@
       "shape": 1
     },
     {
-      "id": 111,
-      "type": "Note",
-      "pos": [
-        1230,
-        700
-      ],
-      "size": [
-        290,
-        88
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 11,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Select \"EDITING AREA\" group\nand press '.' to automatic zoom-in"
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 122,
       "type": "PrimitiveStringMultiline",
       "pos": [
@@ -1024,7 +759,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 12,
+      "order": 7,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -1061,7 +796,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 13,
+      "order": 8,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -1095,7 +830,9 @@
         75,
         26
       ],
-      "flags": {},
+      "flags": {
+        "pinned": true
+      },
       "order": 28,
       "mode": 0,
       "inputs": [
@@ -1130,7 +867,9 @@
         75,
         26
       ],
-      "flags": {},
+      "flags": {
+        "pinned": true
+      },
       "order": 30,
       "mode": 0,
       "inputs": [
@@ -1289,157 +1028,6 @@
       }
     },
     {
-      "id": 96,
-      "type": "Any Switch (rgthree)",
-      "pos": [
-        760,
-        360
-      ],
-      "size": [
-        260,
-        120
-      ],
-      "flags": {},
-      "order": 33,
-      "mode": 0,
-      "inputs": [
-        {
-          "dir": 3,
-          "name": "any_01",
-          "type": "SAMPLER",
-          "link": 258
-        },
-        {
-          "dir": 3,
-          "name": "any_02",
-          "type": "SAMPLER",
-          "link": 259
-        },
-        {
-          "dir": 3,
-          "name": "any_03",
-          "type": "SAMPLER",
-          "link": null
-        },
-        {
-          "dir": 3,
-          "name": "any_04",
-          "type": "SAMPLER",
-          "link": null
-        },
-        {
-          "dir": 3,
-          "name": "any_05",
-          "type": "SAMPLER",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "dir": 4,
-          "label": "SAMPLER",
-          "name": "*",
-          "shape": 3,
-          "type": "SAMPLER",
-          "links": [
-            257
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "rgthree-comfy",
-        "ver": "1.0.2511270846"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 70,
-      "type": "KarrasScheduler",
-      "pos": [
-        760,
-        520
-      ],
-      "size": [
-        260,
-        140
-      ],
-      "flags": {},
-      "order": 38,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "steps",
-          "type": "INT",
-          "widget": {
-            "name": "steps"
-          },
-          "link": 194
-        }
-      ],
-      "outputs": [
-        {
-          "name": "SIGMAS",
-          "type": "SIGMAS",
-          "links": [
-            205
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "KarrasScheduler"
-      },
-      "widgets_values": [
-        8,
-        0.98,
-        0.01,
-        0.3
-      ]
-    },
-    {
-      "id": 59,
-      "type": "PrimitiveNode",
-      "pos": [
-        1640,
-        520
-      ],
-      "size": [
-        250,
-        110
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 14,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "widget": {
-            "name": "steps"
-          },
-          "links": [
-            87,
-            194
-          ]
-        }
-      ],
-      "title": "STEPS (TURBO = 8)",
-      "properties": {
-        "Run widget replace on values": false
-      },
-      "widgets_values": [
-        8,
-        "fixed"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159",
-      "shape": 1
-    },
-    {
       "id": 8,
       "type": "VAEDecode",
       "pos": [
@@ -1485,33 +1073,6 @@
       "widgets_values": []
     },
     {
-      "id": 91,
-      "type": "Note",
-      "pos": [
-        -920,
-        90
-      ],
-      "size": [
-        710,
-        540
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 15,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "title": "README",
-      "properties": {},
-      "widgets_values": [
-        "Amazing Z-Image Workflow v2\n\n## Workflow Prerequisites ##\n\n This workflow requires the following custom nodes, which can be obtained via ComfyUI-Manager or from:\n\n  * rgthree     : https://github.com/rgthree/rgthree-comfy\n  * ComfyUI-GGUF: https://github.com/city96/ComfyUI-GGUF\n\n Additionally, ensure you have the following three models downloaded and placed in their respective\n directories within your ComfyUI installation:\n\n  z_image_turbo-Q5_K_M.gguf\n    * Download: https://huggingface.co/jayn7/Z-Image-Turbo-GGUF/blob/main/z_image_turbo-Q5_K_M.gguf\n    * Local Directory: `ComfyUI/models/diffusion_models/`\n\n  Qwen3-4B.i1-Q5_K_M.gguf\n    * Download: https://huggingface.co/mradermacher/Qwen3-4B-i1-GGUF/blob/main/Qwen3-4B.i1-Q5_K_M.gguf\n    * Local Directory: `ComfyUI/models/text_encoders/`\n\n  ae.safetensors\n    * Download: https://huggingface.co/Comfy-Org/z_image_turbo/blob/main/split_files/vae/ae.safetensors\n    * Local Directory: `Comfyui/models/vae/`\n\n## More Info ##\n   https://github.com/martin-rizzo/AmazingZImageWorkflow\n   https://civitai.com/models/2181458/amazing-z-image-workflow\n\n\nCreated by Martin Rizzo  \n  CivitAI: https://civitai.com/user/Photographer\n  Reddit : https://www.reddit.com/user/FotografoVirtual\n"
-      ],
-      "color": "#322",
-      "bgcolor": "#533",
-      "shape": 1
-    },
-    {
       "id": 107,
       "type": "Reroute",
       "pos": [
@@ -1525,7 +1086,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 62,
+      "order": 61,
       "mode": 0,
       "inputs": [
         {
@@ -1562,7 +1123,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 55,
+      "order": 57,
       "mode": 0,
       "inputs": [
         {
@@ -1584,50 +1145,6 @@
         "showOutputText": false,
         "horizontal": false
       }
-    },
-    {
-      "id": 97,
-      "type": "Fast Muter (rgthree)",
-      "pos": [
-        1280,
-        1270
-      ],
-      "size": [
-        350,
-        140
-      ],
-      "flags": {},
-      "order": 61,
-      "mode": 0,
-      "inputs": [
-        {
-          "dir": 3,
-          "name": "Euler [ NOISY ]",
-          "type": "*",
-          "link": 292
-        },
-        {
-          "dir": 3,
-          "name": "",
-          "type": "*",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "dir": 4,
-          "name": "OPT_CONNECTION",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "title": "SAMPLE SELECTOR",
-      "properties": {
-        "toggleRestriction": "always one"
-      },
-      "color": "#232",
-      "bgcolor": "#353",
-      "shape": 1
     },
     {
       "id": 9,
@@ -1664,47 +1181,6 @@
       "bgcolor": "#535"
     },
     {
-      "id": 57,
-      "type": "PrimitiveNode",
-      "pos": [
-        1640,
-        840
-      ],
-      "size": [
-        510,
-        570
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 16,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "widget": {
-            "name": "value"
-          },
-          "links": [
-            295,
-            296
-          ]
-        }
-      ],
-      "title": "PROMPT",
-      "properties": {
-        "Run widget replace on values": false
-      },
-      "widgets_values": [
-        "A young woman, cosplaying as Indiana Jones, is seen fleeing, staring at the camera with a terrified expression, her eyes wide. She wears a brown fedora with a crumpled crown and brim. Her outfit includes a short-sleeved tan shirt, a brown leather belt cinched at the waist, and khaki pants. She carries a brown leather satchel slung across her left hip. Behind her, a huge, heavy bowling ball, reminiscent of a rolling boulder trap, rolls by, seemingly about to crush her."
-      ],
-      "color": "#232",
-      "bgcolor": "#353",
-      "shape": 1
-    },
-    {
       "id": 38,
       "type": "PrimitiveStringMultiline",
       "pos": [
@@ -1718,7 +1194,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 17,
+      "order": 9,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -1754,7 +1230,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 18,
+      "order": 10,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -1791,7 +1267,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 19,
+      "order": 11,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -1828,7 +1304,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 20,
+      "order": 12,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -1865,7 +1341,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 21,
+      "order": 13,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -1902,7 +1378,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 22,
+      "order": 14,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -1939,7 +1415,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 23,
+      "order": 15,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -1976,7 +1452,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 24,
+      "order": 16,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -2013,7 +1489,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 25,
+      "order": 17,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -2050,8 +1526,8 @@
       "flags": {
         "pinned": true
       },
-      "order": 26,
-      "mode": 0,
+      "order": 18,
+      "mode": 2,
       "inputs": [],
       "outputs": [
         {
@@ -2084,8 +1560,10 @@
         75,
         26
       ],
-      "flags": {},
-      "order": 37,
+      "flags": {
+        "pinned": true
+      },
+      "order": 34,
       "mode": 0,
       "inputs": [
         {
@@ -2120,7 +1598,9 @@
         75,
         26
       ],
-      "flags": {},
+      "flags": {
+        "pinned": true
+      },
       "order": 31,
       "mode": 0,
       "inputs": [
@@ -2156,8 +1636,10 @@
         75,
         26
       ],
-      "flags": {},
-      "order": 35,
+      "flags": {
+        "pinned": true
+      },
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -2192,8 +1674,10 @@
         75,
         26
       ],
-      "flags": {},
-      "order": 36,
+      "flags": {
+        "pinned": true
+      },
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -2228,8 +1712,10 @@
         75,
         26
       ],
-      "flags": {},
-      "order": 41,
+      "flags": {
+        "pinned": true
+      },
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -2264,8 +1750,10 @@
         75,
         26
       ],
-      "flags": {},
-      "order": 42,
+      "flags": {
+        "pinned": true
+      },
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -2300,8 +1788,10 @@
         75,
         26
       ],
-      "flags": {},
-      "order": 43,
+      "flags": {
+        "pinned": true
+      },
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -2336,8 +1826,10 @@
         75,
         26
       ],
-      "flags": {},
-      "order": 44,
+      "flags": {
+        "pinned": true
+      },
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -2372,8 +1864,10 @@
         75,
         26
       ],
-      "flags": {},
-      "order": 45,
+      "flags": {
+        "pinned": true
+      },
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -2408,8 +1902,10 @@
         75,
         26
       ],
-      "flags": {},
-      "order": 46,
+      "flags": {
+        "pinned": true
+      },
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -2444,8 +1940,10 @@
         75,
         26
       ],
-      "flags": {},
-      "order": 47,
+      "flags": {
+        "pinned": true
+      },
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
@@ -2480,8 +1978,10 @@
         75,
         26
       ],
-      "flags": {},
-      "order": 49,
+      "flags": {
+        "pinned": true
+      },
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
@@ -2516,8 +2016,10 @@
         75,
         26
       ],
-      "flags": {},
-      "order": 48,
+      "flags": {
+        "pinned": true
+      },
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -2552,8 +2054,10 @@
         75,
         26
       ],
-      "flags": {},
-      "order": 50,
+      "flags": {
+        "pinned": true
+      },
+      "order": 44,
       "mode": 0,
       "inputs": [
         {
@@ -2589,9 +2093,10 @@
         58
       ],
       "flags": {
-        "collapsed": true
+        "collapsed": true,
+        "pinned": true
       },
-      "order": 27,
+      "order": 19,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2624,8 +2129,10 @@
         380,
         310
       ],
-      "flags": {},
-      "order": 58,
+      "flags": {
+        "pinned": true
+      },
+      "order": 54,
       "mode": 0,
       "inputs": [
         {
@@ -2742,8 +2249,10 @@
         380,
         326
       ],
-      "flags": {},
-      "order": 59,
+      "flags": {
+        "pinned": true
+      },
+      "order": 55,
       "mode": 0,
       "inputs": [
         {
@@ -2837,7 +2346,6 @@
           "link": 335
         },
         {
-          "dir": 3,
           "name": "any_16",
           "type": "STRING",
           "link": null
@@ -2872,8 +2380,10 @@
         450,
         280
       ],
-      "flags": {},
-      "order": 63,
+      "flags": {
+        "pinned": true
+      },
+      "order": 62,
       "mode": 0,
       "inputs": [
         {
@@ -2915,6 +2425,279 @@
       ]
     },
     {
+      "id": 13,
+      "type": "EmptySD3LatentImage",
+      "pos": [
+        760,
+        700
+      ],
+      "size": [
+        260,
+        120
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            207
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "EmptySD3LatentImage"
+      },
+      "widgets_values": [
+        944,
+        1408,
+        1
+      ]
+    },
+    {
+      "id": 70,
+      "type": "KarrasScheduler",
+      "pos": [
+        760,
+        520
+      ],
+      "size": [
+        260,
+        140
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 194
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            205
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "KarrasScheduler"
+      },
+      "widgets_values": [
+        8,
+        0.98,
+        0.01,
+        0.3
+      ]
+    },
+    {
+      "id": 96,
+      "type": "Any Switch (rgthree)",
+      "pos": [
+        760,
+        360
+      ],
+      "size": [
+        260,
+        120
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "any_01",
+          "type": "SAMPLER",
+          "link": 258
+        },
+        {
+          "dir": 3,
+          "name": "any_02",
+          "type": "SAMPLER",
+          "link": 259
+        },
+        {
+          "dir": 3,
+          "name": "any_03",
+          "type": "SAMPLER",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "any_04",
+          "type": "SAMPLER",
+          "link": null
+        },
+        {
+          "dir": 3,
+          "name": "any_05",
+          "type": "SAMPLER",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "label": "SAMPLER",
+          "name": "*",
+          "shape": 3,
+          "type": "SAMPLER",
+          "links": [
+            257
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2511270846"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 68,
+      "type": "KSamplerSelect",
+      "pos": [
+        430,
+        400
+      ],
+      "size": [
+        270,
+        70
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 21,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            258,
+            284
+          ]
+        }
+      ],
+      "title": "Euler [ NOISY ]",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "KSamplerSelect"
+      },
+      "widgets_values": [
+        "euler"
+      ]
+    },
+    {
+      "id": 95,
+      "type": "KSamplerSelect",
+      "pos": [
+        430,
+        510
+      ],
+      "size": [
+        270,
+        80
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 22,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            259,
+            285
+          ]
+        }
+      ],
+      "title": "Euler Ancestral [ SOFT ]",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "KSamplerSelect"
+      },
+      "widgets_values": [
+        "euler_ancestral"
+      ]
+    },
+    {
+      "id": 106,
+      "type": "Node Collector (rgthree)",
+      "pos": [
+        760,
+        860
+      ],
+      "size": [
+        260,
+        70
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "Euler [ NOISY ]",
+          "type": "*",
+          "link": 284
+        },
+        {
+          "dir": 3,
+          "name": "Euler Ancestral [ SOFT ]",
+          "type": "*",
+          "link": 285
+        },
+        {
+          "dir": 3,
+          "name": "",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "Output",
+          "type": "*",
+          "links": [
+            291
+          ]
+        }
+      ],
+      "properties": {}
+    },
+    {
       "id": 110,
       "type": "PrimitiveStringMultiline",
       "pos": [
@@ -2926,9 +2709,10 @@
         200
       ],
       "flags": {
-        "collapsed": true
+        "collapsed": true,
+        "pinned": true
       },
-      "order": 39,
+      "order": 48,
       "mode": 0,
       "inputs": [
         {
@@ -2956,8 +2740,277 @@
         "Node name for S&R": "PrimitiveStringMultiline"
       },
       "widgets_values": [
-        "A young woman, cosplaying as Indiana Jones, is seen fleeing, staring at the camera with a terrified expression, her eyes wide. She wears a brown fedora with a crumpled crown and brim. Her outfit includes a short-sleeved tan shirt, a brown leather belt cinched at the waist, and khaki pants. She carries a brown leather satchel slung across her left hip. Behind her, a huge, heavy bowling ball, reminiscent of a rolling boulder trap, rolls by, seemingly about to crush her."
+        "A woman with fair skin and dark, tousled hair pulled back from her face, is depicted holding a large, ornate sword across her shoulders, looking directly at the camera with a sexy expression and a sarcastic smile. Her eyes are wide and appear to be a light color, framed by dark, dramatic eye makeup. Her lips are painted black. Her right arm is visibly robotic, composed of metallic segments, wires, and tubing, with a metallic hand. Her left arm is partially obscured by the sword's hilt and shoulder strap of her vest, but also shows similar mechanical elements emerging from her shoulder and extending down her arm.\n\nShe wears a black, sleeveless tactical vest with multiple straps and buckles. A rectangular patch with the word \"Z-IMAGE\" in gold lettering is attached to the front of the vest, and beneath it, another patch displays \"Q5_K_S\" in red lettering. Beneath the vest, her torso is encased in a complex assembly of black tubes and metallic joints, suggesting a cybernetic torso. She wears dark, loose-fitting cargo pants cinched at the waist with a black belt. The pants have multiple pockets and straps. The sword she holds is large and appears to be made of dark metal with intricate, gold-colored detailing on the hilt and guard."
       ]
+    },
+    {
+      "id": 91,
+      "type": "Note",
+      "pos": [
+        -920,
+        90
+      ],
+      "size": [
+        710,
+        540
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "README",
+      "properties": {},
+      "widgets_values": [
+        "Amazing Z-Image Workflow v2\n\n## Workflow Prerequisites ##\n\n This workflow requires the following custom nodes, which can be obtained via ComfyUI-Manager or from:\n\n  * rgthree     : https://github.com/rgthree/rgthree-comfy\n  * ComfyUI-GGUF: https://github.com/city96/ComfyUI-GGUF\n\n Additionally, ensure you have the following three models downloaded and placed in their respective\n directories within your ComfyUI installation:\n\n  z_image_turbo-Q5_K_S.gguf\n    * Download: https://huggingface.co/jayn7/Z-Image-Turbo-GGUF/blob/main/z_image_turbo-Q5_K_S.gguf\n    * Local Directory: `ComfyUI/models/diffusion_models/`\n\n  Qwen3-4B.i1-Q5_K_S.gguf\n    * Download: https://huggingface.co/mradermacher/Qwen3-4B-i1-GGUF/blob/main/Qwen3-4B.i1-Q5_K_S.gguf\n    * Local Directory: `ComfyUI/models/text_encoders/`\n\n  ae.safetensors\n    * Download: https://huggingface.co/Comfy-Org/z_image_turbo/blob/main/split_files/vae/ae.safetensors\n    * Local Directory: `Comfyui/models/vae/`\n\n## More Info ##\n   - https://github.com/martin-rizzo/AmazingZImageWorkflow\n   - https://civitai.com/models/2181458/amazing-z-image-workflow\n\n\nCreated by Martin Rizzo  \n  GitHub : https://github.com/martin-rizzo\n  CivitAI: https://civitai.com/user/Photographer\n  Reddit : https://www.reddit.com/user/FotografoVirtual\n"
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "shape": 1
+    },
+    {
+      "id": 88,
+      "type": "Fast Muter (rgthree)",
+      "pos": [
+        1280,
+        840
+      ],
+      "size": [
+        350,
+        390
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 64,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "STYLE: Lo-fi Mobile Photo",
+          "type": "*",
+          "link": 287
+        },
+        {
+          "dir": 3,
+          "name": "",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "STYLE SELECTOR",
+      "properties": {
+        "toggleRestriction": "max one"
+      },
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 97,
+      "type": "Fast Muter (rgthree)",
+      "pos": [
+        1280,
+        1270
+      ],
+      "size": [
+        350,
+        140
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 63,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "Euler [ NOISY ]",
+          "type": "*",
+          "link": 292
+        },
+        {
+          "dir": 3,
+          "name": "",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "SAMPLE SELECTOR",
+      "properties": {
+        "toggleRestriction": "always one"
+      },
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 57,
+      "type": "PrimitiveNode",
+      "pos": [
+        1640,
+        840
+      ],
+      "size": [
+        510,
+        570
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 24,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "links": [
+            295,
+            296
+          ]
+        }
+      ],
+      "title": "PROMPT",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "A woman with fair skin and dark, tousled hair pulled back from her face, is depicted holding a large, ornate sword across her shoulders, looking directly at the camera with a sexy expression and a sarcastic smile. Her eyes are wide and appear to be a light color, framed by dark, dramatic eye makeup. Her lips are painted black. Her right arm is visibly robotic, composed of metallic segments, wires, and tubing, with a metallic hand. Her left arm is partially obscured by the sword's hilt and shoulder strap of her vest, but also shows similar mechanical elements emerging from her shoulder and extending down her arm.\n\nShe wears a black, sleeveless tactical vest with multiple straps and buckles. A rectangular patch with the word \"Z-IMAGE\" in gold lettering is attached to the front of the vest, and beneath it, another patch displays \"Q5_K_S\" in red lettering. Beneath the vest, her torso is encased in a complex assembly of black tubes and metallic joints, suggesting a cybernetic torso. She wears dark, loose-fitting cargo pants cinched at the waist with a black belt. The pants have multiple pockets and straps. The sword she holds is large and appears to be made of dark metal with intricate, gold-colored detailing on the hilt and guard."
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 58,
+      "type": "PrimitiveNode",
+      "pos": [
+        1640,
+        670
+      ],
+      "size": [
+        250,
+        130
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 25,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "widget": {
+            "name": "noise_seed"
+          },
+          "links": [
+            85,
+            193
+          ]
+        }
+      ],
+      "title": "SEED",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        2,
+        "fixed"
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 59,
+      "type": "PrimitiveNode",
+      "pos": [
+        1640,
+        520
+      ],
+      "size": [
+        250,
+        110
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "links": [
+            87,
+            194
+          ]
+        }
+      ],
+      "title": "STEPS (TURBO = 8)",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        8,
+        "fixed"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159",
+      "shape": 1
+    },
+    {
+      "id": 111,
+      "type": "Note",
+      "pos": [
+        1230,
+        700
+      ],
+      "size": [
+        290,
+        88
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 27,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Select \"EDITING AREA\" group\nand press '.' to automatic zoom-in"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
     }
   ],
   "links": [
@@ -3697,9 +3750,9 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.913,
+      "scale": 0.9129999999999999,
       "offset": [
-        -934.9561883899235,
+        -934.9561883899233,
         -455
       ]
     },
