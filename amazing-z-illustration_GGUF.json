@@ -1,15 +1,15 @@
 {
-  "id": "5b1925c4-10a9-4f49-84c6-9c2edf37c3f5",
+  "id": "0359f7b6-1678-4be1-a5e5-ae9bb3b1e355",
   "revision": 0,
-  "last_node_id": 138,
-  "last_link_id": 415,
+  "last_node_id": 142,
+  "last_link_id": 424,
   "nodes": [
     {
       "id": 60,
       "type": "CLIPTextEncode",
       "pos": [
         2870,
-        1130
+        1150
       ],
       "size": [
         400,
@@ -51,7 +51,7 @@
       "type": "EmptyLatentImage",
       "pos": [
         2910,
-        1170
+        1190
       ],
       "size": [
         270,
@@ -89,7 +89,7 @@
       "type": "CLIPTextEncode",
       "pos": [
         2820,
-        1090
+        1110
       ],
       "size": [
         410,
@@ -133,7 +133,7 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "Three people and a creature stand in front of shelves laden with various items. On the left, a brown-haired woman smiles, wearing a light brown tank top. Next to her is a humanoid figure with a body made of dark, rocky material and pronounced musculature, resembling onyx. This figure has a large head with sharp features. To the right of this figure is a muscular man with a light skin tone, wearing a necklace and with shoulder-length green hair; he wears a white crop top with a pink unicorn painted on it. The last individual, on the far right of the image, is a dark-haired woman wearing a black T-shirt. In the foreground are several plates of food: a white bowl with a creamy dish covered in red seasoning, a rectangular container filled with what appear to be strips of meat, a white bowl with fried and breaded pieces, and a white plate with several round, light brown cookies. Also in the foreground is a light blue object resembling a human head."
+        "There are many Minions in the playground."
       ]
     },
     {
@@ -587,7 +587,7 @@
       },
       "widgets_values": [
         true,
-        2,
+        1,
         "fixed",
         1
       ]
@@ -597,7 +597,7 @@
       "type": "KSamplerAdvanced",
       "pos": [
         3110,
-        1060
+        1080
       ],
       "size": [
         304.748046875,
@@ -660,7 +660,7 @@
       },
       "widgets_values": [
         "enable",
-        2,
+        1,
         "randomize",
         8,
         1,
@@ -760,7 +760,7 @@
         "collapsed": true,
         "pinned": true
       },
-      "order": 67,
+      "order": 68,
       "mode": 0,
       "inputs": [
         {
@@ -938,7 +938,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 66,
+      "order": 65,
       "mode": 0,
       "inputs": [
         {
@@ -975,7 +975,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 37,
+      "order": 49,
       "mode": 0,
       "inputs": [
         {
@@ -1013,7 +1013,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 38,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -1051,7 +1051,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 39,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -1089,13 +1089,13 @@
       "flags": {
         "pinned": true
       },
-      "order": 41,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
           "name": "",
           "type": "*",
-          "link": 386
+          "link": 421
         }
       ],
       "outputs": [
@@ -1127,7 +1127,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 42,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -1165,13 +1165,13 @@
       "flags": {
         "pinned": true
       },
-      "order": 44,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
           "name": "",
           "type": "*",
-          "link": 412
+          "link": 423
         }
       ],
       "outputs": [
@@ -1203,13 +1203,13 @@
       "flags": {
         "pinned": true
       },
-      "order": 43,
+      "order": 50,
       "mode": 0,
       "inputs": [
         {
           "name": "",
           "type": "*",
-          "link": 411
+          "link": 424
         }
       ],
       "outputs": [
@@ -1241,13 +1241,13 @@
       "flags": {
         "pinned": true
       },
-      "order": 51,
+      "order": 44,
       "mode": 0,
       "inputs": [
         {
           "name": "",
           "type": "*",
-          "link": 415
+          "link": 420
         }
       ],
       "outputs": [
@@ -1279,7 +1279,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 46,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -1317,7 +1317,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 47,
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
@@ -1393,7 +1393,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 45,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
@@ -1431,7 +1431,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 50,
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
@@ -1469,7 +1469,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 49,
+      "order": 51,
       "mode": 0,
       "inputs": [
         {
@@ -1507,12 +1507,12 @@
       "flags": {
         "pinned": true
       },
-      "order": 62,
+      "order": 61,
       "mode": 0,
       "inputs": [
         {
           "dir": 3,
-          "name": "STYLE: Comic Cover",
+          "name": "STYLE: Comic",
           "type": "*",
           "link": 272
         },
@@ -1524,13 +1524,13 @@
         },
         {
           "dir": 3,
-          "name": "STYLE: Vintage Comic Panel",
+          "name": "STYLE: Vintage Comic",
           "type": "*",
           "link": 274
         },
         {
           "dir": 3,
-          "name": "STYLE: Pop Art",
+          "name": "STYLE: Pop-Art",
           "type": "*",
           "link": 276
         },
@@ -1542,19 +1542,19 @@
         },
         {
           "dir": 3,
-          "name": "STYLE: Cool Anime",
+          "name": "STYLE: Anime",
           "type": "*",
           "link": 278
         },
         {
           "dir": 3,
-          "name": "STYLE: Dark Anime",
+          "name": "STYLE: Manga",
           "type": "*",
           "link": 279
         },
         {
           "dir": 3,
-          "name": "STYLE: Unsettling Comic",
+          "name": "STYLE: Unsettling",
           "type": "*",
           "link": 280
         },
@@ -1572,13 +1572,13 @@
         },
         {
           "dir": 3,
-          "name": "STYLE: Hand-drawn Concept",
+          "name": "STYLE: Hand-Drawn Illustration",
           "type": "*",
           "link": 308
         },
         {
           "dir": 3,
-          "name": "STYLE: Ilustration 2",
+          "name": "STYLE: Digital Illustration",
           "type": "*",
           "link": 313
         },
@@ -1633,7 +1633,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 61,
+      "order": 62,
       "mode": 0,
       "inputs": [
         {
@@ -1771,7 +1771,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 65,
+      "order": 66,
       "mode": 0,
       "inputs": [
         {
@@ -1968,7 +1968,7 @@
         "Node name for S&R": "PrimitiveStringMultiline"
       },
       "widgets_values": [
-        "Three people and a creature stand in front of shelves laden with various items. On the left, a brown-haired woman smiles, wearing a light brown tank top. Next to her is a humanoid figure with a body made of dark, rocky material and pronounced musculature, resembling onyx. This figure has a large head with sharp features. To the right of this figure is a muscular man with a light skin tone, wearing a necklace and with shoulder-length green hair; he wears a white crop top with a pink unicorn painted on it. The last individual, on the far right of the image, is a dark-haired woman wearing a black T-shirt. In the foreground are several plates of food: a white bowl with a creamy dish covered in red seasoning, a rectangular container filled with what appear to be strips of meat, a white bowl with fried and breaded pieces, and a white plate with several round, light brown cookies. Also in the foreground is a light blue object resembling a human head."
+        "There are many Minions in the playground."
       ]
     },
     {
@@ -1996,52 +1996,6 @@
       ],
       "color": "#322",
       "bgcolor": "#533",
-      "shape": 1
-    },
-    {
-      "id": 88,
-      "type": "Fast Muter (rgthree)",
-      "pos": [
-        1280,
-        840
-      ],
-      "size": [
-        350,
-        414
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 68,
-      "mode": 0,
-      "inputs": [
-        {
-          "dir": 3,
-          "name": "STYLE: Comic Cover",
-          "type": "*",
-          "link": 287
-        },
-        {
-          "dir": 3,
-          "name": "",
-          "type": "*",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "dir": 4,
-          "name": "OPT_CONNECTION",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "title": "STYLE SELECTOR",
-      "properties": {
-        "toggleRestriction": "max one"
-      },
-      "color": "#232",
-      "bgcolor": "#353",
       "shape": 1
     },
     {
@@ -2079,7 +2033,7 @@
         "Run widget replace on values": false
       },
       "widgets_values": [
-        2,
+        1,
         "fixed"
       ],
       "color": "#432",
@@ -2167,7 +2121,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 40,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -2226,86 +2180,6 @@
       "widgets_values": [
         "{$@}"
       ]
-    },
-    {
-      "id": 97,
-      "type": "Fast Muter (rgthree)",
-      "pos": [
-        1280,
-        1290
-      ],
-      "size": [
-        350,
-        130
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 60,
-      "mode": 0,
-      "inputs": [
-        {
-          "dir": 3,
-          "name": "Alternative Sampler",
-          "type": "*",
-          "link": 380
-        },
-        {
-          "dir": 3,
-          "name": "",
-          "type": "*",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "dir": 4,
-          "name": "OPT_CONNECTION",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "title": "EXTRA OPTIONS",
-      "properties": {
-        "toggleRestriction": "default"
-      },
-      "color": "#232",
-      "bgcolor": "#353",
-      "shape": 1
-    },
-    {
-      "id": 9,
-      "type": "SaveImage",
-      "pos": [
-        2160,
-        410
-      ],
-      "size": [
-        630,
-        1010
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 72,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 16
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75"
-      },
-      "widgets_values": [
-        "ZImage/%date:yyyy_MM_dd%/ZI"
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
     },
     {
       "id": 95,
@@ -2381,6 +2255,495 @@
       ]
     },
     {
+      "id": 13,
+      "type": "EmptySD3LatentImage",
+      "pos": [
+        450,
+        860
+      ],
+      "size": [
+        260,
+        120
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            375
+          ]
+        }
+      ],
+      "title": "Default Vertical Image",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "EmptySD3LatentImage"
+      },
+      "widgets_values": [
+        944,
+        1408,
+        1
+      ]
+    },
+    {
+      "id": 136,
+      "type": "Node Collector (rgthree)",
+      "pos": [
+        910,
+        1290
+      ],
+      "size": [
+        190.071875,
+        66
+      ],
+      "flags": {},
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "name": "Alternative Sampler",
+          "type": "*",
+          "link": 378
+        },
+        {
+          "dir": 3,
+          "name": "Horizontal Image",
+          "type": "*",
+          "link": 379
+        },
+        {
+          "dir": 3,
+          "name": "",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "Output",
+          "type": "*",
+          "links": [
+            380
+          ]
+        }
+      ],
+      "properties": {}
+    },
+    {
+      "id": 47,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1660,
+        80
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 13,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            382
+          ]
+        }
+      ],
+      "title": "STYLE: European Comic",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "Italian comic book, meticulously hand-drawn with bold colors and sinuous lines, featuring hypersaturated imagery characterized by high-contrast ballpoint hatching and intricate cross-hatch patterns. A seamless complete full page illustration with explicit adult content in red, green and blue. Featuring: {$@}"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 37,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1660,
+        300
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 14,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            384
+          ]
+        }
+      ],
+      "title": "STYLE: Vintage Comic",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "An old sheet of paper with a vintage erotic comic strip from 1950 painted in white, red, blue and black with freehand outlines, a detailed and dirty image featuring: {$@}"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 101,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1660,
+        2940
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 15,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            391
+          ]
+        }
+      ],
+      "title": "STYLE: CGA Cyan-Magenta Monitor",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "On a wooden table sits an old white CRT PC monitor, reflecting light from a window. The monitor displays the following:\nonly black, intense cyan, intense magenta, and intense white.\nEverything should be replaced with those 4 colors, for example, skin should be magenta, plants should be cyan.\nThe background must always be black.\nPixel-Art 2D image from 1980 with solid colors and CGA Graphics using only black, cyan and magenta palette. Featuring: {$@}"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 38,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1660,
+        520
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 16,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            421
+          ]
+        }
+      ],
+      "title": "STYLE: Pop-Art",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "An image in the Pop Art style characterized by bold, vibrant colors that stand out vividly, and thick black outlines defining each form with clarity and contrast. The surface is executed using a pointillist technique, where small dots of color come together to create the overall picture. Dazzling patterns and possibly comic book-like elements enhance the graphic quality. The scene has a flat, two-dimensional appearance typical of pop art aesthetics, featuring {$@}"
+      ]
+    },
+    {
+      "id": 117,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1660,
+        740
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 17,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            387
+          ]
+        }
+      ],
+      "title": "STYLE: Studio Anime",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "Epic anime filmed by Studio Ghibli, Japanese animation and hand-painted, depicts: {$@}"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 41,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1660,
+        960
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 18,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            423
+          ]
+        }
+      ],
+      "title": "STYLE: Anime",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "An anime-style image with an evil atmosphere and attractive poses, using clean and defined lines, and dramatic facial expressions. Including cold and dark tones and a dramatic use of lighting and shadows that highlight the central figure and create a somber and intense atmosphere. A dynamic shot with black background featuring: {$@}"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 93,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1660,
+        1400
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 19,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            414
+          ]
+        }
+      ],
+      "title": "STYLE: Digital Illustration",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "A detailed illustration in stylized line art, rendered with vector graphics aesthetics. With black solid shadows and big negative space creating enigmatic stillness. Saturated highlights with glowing accents, emphasizing contrasts between obscurity and luminous for a vivid impact. Featuring: {$@}"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 43,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1660,
+        1620
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 20,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            402
+          ]
+        }
+      ],
+      "title": "STYLE: Minimalist Sketchwash",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "A minimalist and simple pencil sketch with large empty areas and a white background with zones painted using watercolors. Featuring: {$@}. "
+      ],
+      "shape": 1
+    },
+    {
+      "id": 63,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1660,
+        2720
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 21,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            409
+          ]
+        }
+      ],
+      "title": "STYLE: Simple Vector Illustration",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "A stylized digital illustration with a graphic design aesthetic, featuring flat, solid colors, no defined outlines, and a minimalist approach to composition, featuring: {$@}. Iconography style."
+      ],
+      "shape": 1
+    },
+    {
+      "id": 122,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1660,
+        2500
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 22,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            420
+          ]
+        }
+      ],
+      "title": "STYLE: Unsettling",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "An illustration with stippling textures; intense side lighting with deep shadows, and hard edges; low key atmosphere with high contrast and minimal highlights; cinematic chiaroscuro; horror graphic novel with dynamic composition, featuring: {$@}"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 130,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1660,
+        1840
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 23,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            404
+          ]
+        }
+      ],
+      "title": "STYLE: Ink Draw",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "A realistic ink draw with fine cross-hatching and stippling, rendering deep shadows and highlights with a monochromatic palette. The image features large areas of white and high contrast thanks to the varied line density. Featuring: {$@}\n\n"
+      ],
+      "shape": 1
+    },
+    {
       "id": 135,
       "type": "Any Switch (rgthree)",
       "pos": [
@@ -2388,11 +2751,13 @@
         700
       ],
       "size": [
-        250.08046875000002,
-        106
+        260,
+        110
       ],
-      "flags": {},
-      "order": 35,
+      "flags": {
+        "pinned": true
+      },
+      "order": 46,
       "mode": 0,
       "inputs": [
         {
@@ -2445,43 +2810,6 @@
       "widgets_values": []
     },
     {
-      "id": 13,
-      "type": "EmptySD3LatentImage",
-      "pos": [
-        450,
-        860
-      ],
-      "size": [
-        260,
-        120
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "slot_index": 0,
-          "links": [
-            375
-          ]
-        }
-      ],
-      "title": "Default Vertical Image",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "EmptySD3LatentImage"
-      },
-      "widgets_values": [
-        944,
-        1408,
-        1
-      ]
-    },
-    {
       "id": 134,
       "type": "EmptySD3LatentImage",
       "pos": [
@@ -2492,8 +2820,10 @@
         260,
         120
       ],
-      "flags": {},
-      "order": 13,
+      "flags": {
+        "pinned": true
+      },
+      "order": 24,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -2520,31 +2850,27 @@
       ]
     },
     {
-      "id": 136,
-      "type": "Node Collector (rgthree)",
+      "id": 88,
+      "type": "Fast Muter (rgthree)",
       "pos": [
-        910,
-        1290
+        1280,
+        840
       ],
       "size": [
-        190.071875,
-        66
+        350,
+        440
       ],
-      "flags": {},
-      "order": 36,
+      "flags": {
+        "pinned": true
+      },
+      "order": 67,
       "mode": 0,
       "inputs": [
         {
           "dir": 3,
-          "name": "Alternative Sampler",
+          "name": "STYLE: Comic",
           "type": "*",
-          "link": 378
-        },
-        {
-          "dir": 3,
-          "name": "Horizontal Image",
-          "type": "*",
-          "link": 379
+          "link": 287
         },
         {
           "dir": 3,
@@ -2556,419 +2882,98 @@
       "outputs": [
         {
           "dir": 4,
-          "name": "Output",
+          "name": "OPT_CONNECTION",
           "type": "*",
-          "links": [
-            380
-          ]
+          "links": null
         }
       ],
-      "properties": {}
-    },
-    {
-      "id": 125,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1660,
-        -140
-      ],
-      "size": [
-        450,
-        180
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 14,
-      "mode": 2,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            381
-          ]
-        }
-      ],
-      "title": "STYLE: Comic Cover",
+      "title": "STYLE SELECTOR",
       "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
+        "toggleRestriction": "max one"
       },
-      "widgets_values": [
-        "Illustration with intense colors and adult comic book cover style, with lots of cleavages and sexual provocation. Action scene featuring: {$@}"
-      ],
+      "color": "#232",
+      "bgcolor": "#353",
       "shape": 1
     },
     {
-      "id": 47,
-      "type": "PrimitiveStringMultiline",
+      "id": 97,
+      "type": "Fast Muter (rgthree)",
       "pos": [
-        -1660,
-        80
+        1280,
+        1320
       ],
       "size": [
-        450,
-        180
+        350,
+        110
       ],
       "flags": {
         "pinned": true
       },
-      "order": 15,
-      "mode": 2,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            382
-          ]
-        }
-      ],
-      "title": "STYLE: European Comic",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "Italian comic book, meticulously hand-drawn with bold colors and sinuous lines, featuring hypersaturated imagery characterized by high-contrast ballpoint hatching and intricate cross-hatch patterns. A seamless complete full page illustration with explicit adult content in red, green and blue. Featuring: {$@}"
-      ],
-      "shape": 1
-    },
-    {
-      "id": 37,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1660,
-        300
-      ],
-      "size": [
-        450,
-        180
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 16,
-      "mode": 2,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            384
-          ]
-        }
-      ],
-      "title": "STYLE: Vintage Comic Panel",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "An old sheet of paper with a vintage erotic comic strip from 1950 painted in white, red, blue and black with freehand outlines, a detailed and dirty image featuring: {$@}"
-      ],
-      "shape": 1
-    },
-    {
-      "id": 101,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1660,
-        2940
-      ],
-      "size": [
-        450,
-        180
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 17,
+      "order": 60,
       "mode": 0,
-      "inputs": [],
-      "outputs": [
+      "inputs": [
         {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            391
-          ]
+          "dir": 3,
+          "name": "Alternative Sampler",
+          "type": "*",
+          "link": 380
+        },
+        {
+          "dir": 3,
+          "name": "",
+          "type": "*",
+          "link": null
         }
       ],
-      "title": "STYLE: CGA Cyan-Magenta Monitor",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "On a wooden table sits an old white CRT PC monitor, reflecting light from a window. The monitor displays the following:\nonly black, intense cyan, intense magenta, and intense white.\nEverything should be replaced with those 4 colors, for example, skin should be magenta, plants should be cyan.\nThe background must always be black.\nPixel-Art 2D image from 1980 with solid colors and CGA Graphics using only black, cyan and magenta palette. Featuring: {$@}"
+      "outputs": [
+        {
+          "dir": 4,
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
       ],
+      "title": "EXTRA OPTIONS (default = no)",
+      "properties": {
+        "toggleRestriction": "default"
+      },
+      "color": "#232",
+      "bgcolor": "#353",
       "shape": 1
     },
     {
-      "id": 38,
-      "type": "PrimitiveStringMultiline",
+      "id": 9,
+      "type": "SaveImage",
       "pos": [
-        -1660,
-        520
+        2160,
+        410
       ],
       "size": [
-        450,
-        180
+        630,
+        1020
       ],
       "flags": {
         "pinned": true
       },
-      "order": 18,
-      "mode": 2,
-      "inputs": [],
-      "outputs": [
+      "order": 72,
+      "mode": 0,
+      "inputs": [
         {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            386
-          ]
+          "name": "images",
+          "type": "IMAGE",
+          "link": 16
         }
       ],
-      "title": "STYLE: Pop Art",
+      "outputs": [],
       "properties": {
         "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
+        "ver": "0.3.75"
       },
       "widgets_values": [
-        "An image in the Pop Art style characterized by bold, vibrant colors that stand out vividly, and thick black outlines defining each form with clarity and contrast. The surface is executed using a pointillist technique, where small dots of color come together to create the overall picture. Dazzling patterns and possibly comic book-like elements enhance the graphic quality. The scene has a flat, two-dimensional appearance typical of pop art aesthetics, featuring {$@}"
-      ]
-    },
-    {
-      "id": 117,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1660,
-        740
+        "ZImage/%date:yyyy_MM_dd%/ZI"
       ],
-      "size": [
-        450,
-        180
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 19,
-      "mode": 2,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            387
-          ]
-        }
-      ],
-      "title": "STYLE: Studio Anime",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "Epic anime filmed by Studio Ghibli, Japanese animation and hand-painted, depicts: {$@}"
-      ],
-      "shape": 1
-    },
-    {
-      "id": 41,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1660,
-        960
-      ],
-      "size": [
-        450,
-        180
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 20,
-      "mode": 2,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            411
-          ]
-        }
-      ],
-      "title": "STYLE: Dark Anime",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "An anime-style image with an evil atmosphere and attractive poses, using clean and defined lines, and dramatic facial expressions. Including cold and dark tones and a dramatic use of lighting and shadows that highlight the central figure and create a somber and intense atmosphere. A dynamic shot with black background featuring: {$@}"
-      ],
-      "shape": 1
-    },
-    {
-      "id": 124,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1660,
-        1180
-      ],
-      "size": [
-        450,
-        180
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 21,
-      "mode": 2,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            412
-          ]
-        }
-      ],
-      "title": "STYLE: Cool Anime",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "Dark fantasy masterpiece of cel_shading, with detailed anime violent style, featuring: {$@}."
-      ],
-      "shape": 1
-    },
-    {
-      "id": 93,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1660,
-        1400
-      ],
-      "size": [
-        450,
-        180
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 22,
-      "mode": 2,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            414
-          ]
-        }
-      ],
-      "title": "STYLE: Ilustration 2",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "A detailed illustration in stylized line art, rendered with vector graphics aesthetics. With black solid shadows and big negative space creating enigmatic stillness. Saturated highlights with glowing accents, emphasizing contrasts between obscurity and luminous for a vivid impact. Featuring: {$@}"
-      ],
-      "shape": 1
-    },
-    {
-      "id": 43,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1660,
-        1620
-      ],
-      "size": [
-        450,
-        180
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 23,
-      "mode": 2,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            402
-          ]
-        }
-      ],
-      "title": "STYLE: Minimalist Sketchwash",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "A minimalist and simple pencil sketch with large empty areas and a white background with zones painted using watercolors. Featuring: {$@}. "
-      ],
-      "shape": 1
-    },
-    {
-      "id": 130,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1660,
-        1840
-      ],
-      "size": [
-        450,
-        180
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 24,
-      "mode": 2,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            404
-          ]
-        }
-      ],
-      "title": "STYLE: Ink Draw",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "A realistic ink draw with fine cross-hatching and stippling, rendering deep shadows and highlights with a monochromatic palette. The image features large areas of white and high contrast thanks to the varied line density. Featuring: {$@}\n\n"
-      ],
+      "color": "#323",
+      "bgcolor": "#535",
       "shape": 1
     },
     {
@@ -2997,14 +3002,88 @@
           ]
         }
       ],
-      "title": "STYLE: Hand-drawn Concept",
+      "title": "STYLE: Hand-Drawn Illustration",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.3.75",
         "Node name for S&R": "PrimitiveStringMultiline"
       },
       "widgets_values": [
-        "A high quality concept art with hand-drawn colorful bold lines in a realistic style.The image features: {$@}"
+        "A realistic concept-art, done in ink. Like a very sharp photograph, but drawn. This colorful concept-art features large white areas and high contrast thanks to the varying density of the lines. Featuring: {$@}\n"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 125,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1660,
+        -140
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            381
+          ]
+        }
+      ],
+      "title": "STYLE: Comic",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "Illustration with intense colors and adult comic book cover style, with lots of cleavages and sexual provocation. Action scene featuring: {$@}"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 124,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1660,
+        1180
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 27,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            424
+          ]
+        }
+      ],
+      "title": "STYLE: Manga",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "Black and white manga-style illustration for adults, with explicit and violent content. The illustration features: {$@}."
       ],
       "shape": 1
     },
@@ -3022,7 +3101,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 26,
+      "order": 28,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -3041,81 +3120,7 @@
         "Node name for S&R": "PrimitiveStringMultiline"
       },
       "widgets_values": [
-        "Videogame with 2D pixel art image in 16 colors, with blocky pixels and saturated colors. Featuring {$@}"
-      ],
-      "shape": 1
-    },
-    {
-      "id": 63,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1660,
-        2720
-      ],
-      "size": [
-        450,
-        180
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 27,
-      "mode": 2,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            409
-          ]
-        }
-      ],
-      "title": "STYLE: Simple Vector Illustration",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "A stylized digital illustration with a graphic design aesthetic, featuring flat, solid colors, no defined outlines, and a minimalist approach to composition, featuring: {$@}. Iconography style."
-      ],
-      "shape": 1
-    },
-    {
-      "id": 122,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1660,
-        2500
-      ],
-      "size": [
-        450,
-        180
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 28,
-      "mode": 2,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            415
-          ]
-        }
-      ],
-      "title": "STYLE: Unsettling Comic",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "An illustration with stippling textures; intense side lighting with deep shadows, and hard edges; low key atmosphere with high contrast and minimal highlights; cinematic chiaroscuro; horror graphic novel with dynamic composition, featuring: {$@}"
+        "Video game with 2D pixel art graphics in 16 colors; the image has intense colors and high contrast. Featuring {$@}"
       ],
       "shape": 1
     },
@@ -3128,7 +3133,7 @@
       ],
       "size": [
         510,
-        580
+        590
       ],
       "flags": {
         "pinned": true
@@ -3154,7 +3159,7 @@
         "Run widget replace on values": false
       },
       "widgets_values": [
-        "Three people and a creature stand in front of shelves laden with various items. On the left, a brown-haired woman smiles, wearing a light brown tank top. Next to her is a humanoid figure with a body made of dark, rocky material and pronounced musculature, resembling onyx. This figure has a large head with sharp features. To the right of this figure is a muscular man with a light skin tone, wearing a necklace and with shoulder-length green hair; he wears a white crop top with a pink unicorn painted on it. The last individual, on the far right of the image, is a dark-haired woman wearing a black T-shirt. In the foreground are several plates of food: a white bowl with a creamy dish covered in red seasoning, a rectangular container filled with what appear to be strips of meat, a white bowl with fried and breaded pieces, and a white plate with several round, light brown cookies. Also in the foreground is a light blue object resembling a human head."
+        "There are many Minions in the playground."
       ],
       "color": "#232",
       "bgcolor": "#353",
@@ -3763,14 +3768,6 @@
       "*"
     ],
     [
-      386,
-      38,
-      0,
-      42,
-      0,
-      "*"
-    ],
-    [
       387,
       117,
       0,
@@ -3835,22 +3832,6 @@
       "*"
     ],
     [
-      411,
-      41,
-      0,
-      48,
-      0,
-      "*"
-    ],
-    [
-      412,
-      124,
-      0,
-      46,
-      0,
-      "*"
-    ],
-    [
       414,
       93,
       0,
@@ -3859,10 +3840,34 @@
       "*"
     ],
     [
-      415,
+      420,
       122,
       0,
       64,
+      0,
+      "*"
+    ],
+    [
+      421,
+      38,
+      0,
+      42,
+      0,
+      "*"
+    ],
+    [
+      423,
+      41,
+      0,
+      46,
+      0,
+      "*"
+    ],
+    [
+      424,
+      124,
+      0,
+      48,
       0,
       "*"
     ]
@@ -3918,7 +3923,7 @@
       "title": "CIVITAI Compatibility",
       "bounding": [
         2800,
-        980,
+        1000,
         630,
         430
       ],
@@ -3932,9 +3937,9 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.913,
+      "scale": 0.9129999999999999,
       "offset": [
-        -934.9561883899235,
+        -934.9561883899233,
         -455
       ]
     },
