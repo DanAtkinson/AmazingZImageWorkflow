@@ -23,13 +23,13 @@ A workflow developed while experimenting with [Z-Image-Turbo](https://github.com
 5. [License](#license)
 
 ## Features
-
-- **Style Selector:** Choose from fourteen customizable image styles for experimentation.
-- **Sampler Selector:** Easily pick between the two optimal samplers.
-- Preconfigured workflows for each checkpoint formats (GGUF / Safetensors).
-- Custom sigma values subjectively adjusted.
+- **Style Selector**: Choose from fifteen customizable image styles for experimentation.
+- **Alternative Sampler Switch**: Easily test generation with an alternative sampler. 
+- **Landscape Orientation Switch**: Change to horizontal image generation with a single click.
+- Preconfigured workflows for each checkpoint format (GGUF / SAFETENSORS).
+- Custom sigma values fine-tuned to my personal preference (subjectivity 100%)
 - Generated images are saved in the "ZImage" folder, organized by date.
-- Includes a trick to enable automatic CivitAI prompt detection.
+- Incorporates a trick to enable automatic CivitAI prompt detection.
 
 ### Predefined Styles in This Version
 
