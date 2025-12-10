@@ -32,9 +32,13 @@ A workflow for [Z-Image-Turbo](https://github.com/Tongyi-MAI/Z-Image) extending 
 - Generated images are saved in the "ZImage" folder, organized by date.
 - Incorporates a trick to enable automatic CivitAI prompt detection.
 
-### Predefined Styles in This Version
+### The 15 Predefined Styles in "amazing-z-image"
+<img src="amazing-z-image_GGUF.png" width="25%"></img>
 
-<img src="files/styles.png" width="50%"></img>
+### The 15 Predefined Styles in "amazing-z-comic"
+<img src="amazing-z-comic_GGUF.png" width="25%"></img>
+
+
 
 ## Workflows Overview
 
