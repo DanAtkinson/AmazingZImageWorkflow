@@ -34,6 +34,7 @@ jobs:
           echo "ZIP1_PATH=$ZIP_PATH" >> $GITHUB_ENV
 
       - name: Zipping Amazing Z-Image
+        run: |
           source files/utils/release.sh 'z-image' "${{ github.ref_name }}" "${{ github.workspace }}"
           echo "ZIP2_PATH=$ZIP_PATH" >> $GITHUB_ENV
 
