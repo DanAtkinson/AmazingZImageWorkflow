@@ -31,33 +31,24 @@ jobs:
       - name: Zipping Amazing Z-Comics
         run: |
           source files/utils/release.sh 'z-comics' "${{ github.ref_name }}" "${{ github.workspace }}"
-          echo "ZIP1_PATH=$ZIP_PATH" >> $GITHUB_ENV
+          echo "RELEASE_DIR=$RELEASE_DIR" >> $GITHUB_ENV
 
       - name: Zipping Amazing Z-Image
         run: |
           source files/utils/release.sh 'z-image' "${{ github.ref_name }}" "${{ github.workspace }}"
-          echo "ZIP2_PATH=$ZIP_PATH" >> $GITHUB_ENV
+          echo "RELEASE_DIR=$RELEASE_DIR" >> $GITHUB_ENV
 
 
-      - name: Print ZIP Path
+      - name: Print ZIP Path (debugging)
         run: |
-          echo "ZIP1_PATH=${{ env.ZIP1_PATH }}"
-          echo "ZIP2_PATH=${{ env.ZIP2_PATH }}"
+          echo "RELEASE_DIR=${{ env.RELEASE_DIR }}"
 
-      # - name: Create ZIP Archive
-      #   run: |
-      #     ZIP_NAME="release-${{ github.ref_name }}.zip"
-      #     echo "ZIP_NAME=$ZIP_NAME" >> $GITHUB_ENV
-      #     cd "${{ github.workspace }}/output_package/"
-      #     zip -r "${{ github.workspace }}/$ZIP_NAME" ./*
-      #     echo "ZIP_FILE_PATH=${{ github.workspace }}/$ZIP_NAME" >> $GITHUB_ENV
-
-      # - name: Upload Release Asset
-      #   uses: svenstaro/upload-release-action@2.11.3
-      #   with:
-      #     repo_token : ${{ secrets.GITHUB_TOKEN }}
-      #     file       : ${{ env.ZIP_FILE_PATH }}
-      #     asset_name : ${{ env.ZIP_NAME }}
-      #     tag        : ${{ github.ref }}
-      #     overwrite  : true
-      #     body       : "Automatic release generated for the tag ${{ github.ref_name }}"
+      - name: Upload ZIP Packages to Release
+        uses: svenstaro/upload-release-action@2.11.3
+        with:
+          repo_token : ${{ secrets.GITHUB_TOKEN }}
+          file       : ${{ env.RELEASE_DIR }}/* # the folder which has all the files that you want to release
+          tag        : ${{ github.ref }}
+          overwrite  : true
+          file_glob  : true
+          body       : "Automatic release generated for the tag ${{ github.ref_name }}"
