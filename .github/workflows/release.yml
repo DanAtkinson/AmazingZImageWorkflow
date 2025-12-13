@@ -1,0 +1,56 @@
+#
+# File    : .github/workflows/release.yml
+# Purpose : Github workflow to invoke release.sh and upload ZIPs as a release.
+# Author  : Martin Rizzo | <martinrizzo@gmail.com>
+# Date    : Dec 12, 2025
+# Repo    : https://github.com/martin-rizzo/AmazingZImageWorkflow
+# License : MIT
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#                           Amazing Z-Image Workflow
+#  Z-Image workflow with customizable image styles and GPU-friendly versions
+#_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _*/
+name: Release ZIP packages
+permissions:
+  contents: write
+on:
+  push:
+    tags:
+      - '*'
+jobs:
+  build-and-release:
+    name: Build and Release
+    runs-on: ubuntu-24.04
+
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Invoke release.sh
+        run: |
+          ZIP1_PATH=$(files/utils/release.sh 1 "${{ github.ref_name }}" "${{ github.workspace }}")
+          echo "ZIP1_PATH=$ZIP1_PATH" >> $GITHUB_ENV
+
+      - name: Print ZIP1 Name and Path
+        run: |
+          echo "ZIP1_PATH=${{ env.ZIP1_PATH }}"
+
+      # - name: Create ZIP Archive
+      #   run: |
+      #     ZIP_NAME="release-${{ github.ref_name }}.zip"
+      #     echo "ZIP_NAME=$ZIP_NAME" >> $GITHUB_ENV
+      #     cd "${{ github.workspace }}/output_package/"
+      #     zip -r "${{ github.workspace }}/$ZIP_NAME" ./*
+      #     echo "ZIP_FILE_PATH=${{ github.workspace }}/$ZIP_NAME" >> $GITHUB_ENV
+
+      # - name: Upload Release Asset
+      #   uses: svenstaro/upload-release-action@2.11.3
+      #   with:
+      #     repo_token : ${{ secrets.GITHUB_TOKEN }}
+      #     file       : ${{ env.ZIP_FILE_PATH }}
+      #     asset_name : ${{ env.ZIP_NAME }}
+      #     tag        : ${{ github.ref }}
+      #     overwrite  : true
+      #     body       : "Automatic release generated for the tag ${{ github.ref_name }}"
