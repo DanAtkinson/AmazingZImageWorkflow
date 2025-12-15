@@ -99,7 +99,7 @@
         "collapsed": true,
         "pinned": true
       },
-      "order": 52,
+      "order": 51,
       "mode": 0,
       "inputs": [
         {
@@ -133,7 +133,7 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "The image shows a woman lying on her side on a bed with a blue-gray bedsheet. She has long, dark hair pulled back into a high ponytail secured with a black hair tie. She is wearing a light gray sleeveless tank top and a sheer, high-waisted white undergarment that extends to mid-thigh. Her body is prominently displayed, with a large, rounded abdomen and full thighs resting on the bed. The bed features a white pillow with the handwritten text \"SIN\" in black marker and a small black heart symbol. Scattered around her are crumpled white tissues, an open red box of tissues, and a few white cotton balls. In the background, there is a small wooden desk with a small religious statue placed on it, alongside a stack of books on a shelf. The room is softly lit."
+        "A young nurse stands beside a blue demon in a hospital, her expression one of surprise and her eyes wide. She has fair, smooth skin and long, blue hair. She wears a form-fitting, sleeveless black and red dress with distinctive red trim that accentuates her figure. The blue demon, with a fierce expression, has long, pointed red horns and sharp teeth. He wears a loose, red and black robe, and with one hand, he firmly grasps the nurse's waist, pulling her toward him. The atmosphere of the image is dark and mysterious, with the nurse and the demon standing out against the backdrop of a hospital."
       ]
     },
     {
@@ -729,7 +729,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 65,
+      "order": 66,
       "mode": 0,
       "inputs": [
         {
@@ -766,7 +766,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 44,
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
@@ -804,7 +804,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 46,
+      "order": 52,
       "mode": 0,
       "inputs": [
         {
@@ -918,7 +918,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 47,
+      "order": 44,
       "mode": 0,
       "inputs": [
         {
@@ -956,7 +956,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 49,
+      "order": 53,
       "mode": 0,
       "inputs": [
         {
@@ -994,7 +994,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 48,
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
@@ -1032,7 +1032,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 42,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
@@ -1070,7 +1070,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 45,
+      "order": 48,
       "mode": 0,
       "inputs": [
         {
@@ -1146,7 +1146,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 41,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -1184,7 +1184,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 53,
+      "order": 49,
       "mode": 0,
       "inputs": [
         {
@@ -1222,7 +1222,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 50,
+      "order": 46,
       "mode": 0,
       "inputs": [
         {
@@ -1260,7 +1260,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 40,
+      "order": 47,
       "mode": 0,
       "inputs": [
         {
@@ -1298,7 +1298,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 43,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -1336,7 +1336,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 67,
+      "order": 69,
       "mode": 0,
       "inputs": [
         {
@@ -1559,7 +1559,7 @@
         "collapsed": true,
         "pinned": true
       },
-      "order": 51,
+      "order": 50,
       "mode": 0,
       "inputs": [
         {
@@ -1587,7 +1587,7 @@
         "Node name for S&R": "PrimitiveStringMultiline"
       },
       "widgets_values": [
-        "The image shows a woman lying on her side on a bed with a blue-gray bedsheet. She has long, dark hair pulled back into a high ponytail secured with a black hair tie. She is wearing a light gray sleeveless tank top and a sheer, high-waisted white undergarment that extends to mid-thigh. Her body is prominently displayed, with a large, rounded abdomen and full thighs resting on the bed. The bed features a white pillow with the handwritten text \"SIN\" in black marker and a small black heart symbol. Scattered around her are crumpled white tissues, an open red box of tissues, and a few white cotton balls. In the background, there is a small wooden desk with a small religious statue placed on it, alongside a stack of books on a shelf. The room is softly lit."
+        "A young nurse stands beside a blue demon in a hospital, her expression one of surprise and her eyes wide. She has fair, smooth skin and long, blue hair. She wears a form-fitting, sleeveless black and red dress with distinctive red trim that accentuates her figure. The blue demon, with a fierce expression, has long, pointed red horns and sharp teeth. He wears a loose, red and black robe, and with one hand, he firmly grasps the nurse's waist, pulling her toward him. The atmosphere of the image is dark and mysterious, with the nurse and the demon standing out against the backdrop of a hospital."
       ]
     },
     {
@@ -1641,7 +1641,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 61,
+      "order": 62,
       "mode": 0,
       "inputs": [
         {
@@ -1682,7 +1682,7 @@
         },
         {
           "dir": 3,
-          "name": "STYLE: Tilt‑Shift / Toy Photo",
+          "name": "STYLE: Tilt Shift / Toy Photo",
           "type": "*",
           "link": 279
         },
@@ -1700,7 +1700,7 @@
         },
         {
           "dir": 3,
-          "name": "STYLE: Light‑Painting Photo",
+          "name": "STYLE: Light Painting Photo",
           "type": "*",
           "link": 282
         },
@@ -1768,7 +1768,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 62,
+      "order": 61,
       "mode": 0,
       "inputs": [
         {
@@ -2030,7 +2030,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 69,
+      "order": 68,
       "mode": 0,
       "inputs": [
         {
@@ -2882,7 +2882,7 @@
           ]
         }
       ],
-      "title": "STYLE: Light‑Painting Photo",
+      "title": "STYLE: Light Painting Photo",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.3.75",
@@ -2890,43 +2890,6 @@
       },
       "widgets_values": [
         "You are an experimental photographer who enjoys crafting light‑painting pictures using long‑exposure settings, with LED sources.\n\nYour tastes encompass glowing trails, vivid colors, and abstract, high‑contrast compositions.  \n---  \nCreate the following image:\n{$@}\n"
-      ],
-      "shape": 1
-    },
-    {
-      "id": 45,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1990,
-        2730
-      ],
-      "size": [
-        450,
-        180
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 17,
-      "mode": 2,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            410
-          ]
-        }
-      ],
-      "title": "STYLE: Neon City Photo",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "You are an amateur filmmaker who captures violent scenes with a shallow depth of field.  \nYour tastes encompass neon‑saturated, atmospheric shots that emphasize intense red, green, blue colors, glowing signage, and selective focus.\n---\nTake the following photograph:\n{$@}\n"
       ],
       "shape": 1
     },
@@ -2944,7 +2907,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 18,
+      "order": 17,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -2981,7 +2944,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 19,
+      "order": 18,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -3018,8 +2981,8 @@
       "flags": {
         "pinned": true
       },
-      "order": 20,
-      "mode": 2,
+      "order": 19,
+      "mode": 0,
       "inputs": [],
       "outputs": [
         {
@@ -3055,7 +3018,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 21,
+      "order": 20,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -3079,80 +3042,6 @@
       "shape": 1
     },
     {
-      "id": 43,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1990,
-        1630
-      ],
-      "size": [
-        450,
-        180
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 22,
-      "mode": 2,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            402
-          ]
-        }
-      ],
-      "title": "STYLE: Minimalist Photo",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "You are a contemporary visual artist who prefers shooting with a full‑frame mirrorless camera, at a wide aperture to highlight negative space.  \nYour tastes encompass clean, minimalist compositions that emphasize empty space while removing any distracting elements.\n---\nTake the following photograph:\n{$@}"
-      ],
-      "shape": 1
-    },
-    {
-      "id": 47,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1990,
-        90
-      ],
-      "size": [
-        450,
-        180
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 23,
-      "mode": 2,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            382
-          ]
-        }
-      ],
-      "title": "STYLE: Cinematic",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "You are a professional filmmaker who enjoys capturing striking images in full-frame mode, with a 24mm lens and shallow depth of field.\nYour tastes range from dramatic cinematic shots to spontaneous moments with professional cinematography style.\n---\nCreate the following movie shot:\n{$@}"
-      ],
-      "shape": 1
-    },
-    {
       "id": 117,
       "type": "PrimitiveStringMultiline",
       "pos": [
@@ -3166,7 +3055,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 24,
+      "order": 21,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -3203,7 +3092,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 25,
+      "order": 22,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -3215,7 +3104,7 @@
           ]
         }
       ],
-      "title": "STYLE: Tilt‑Shift / Toy Photo",
+      "title": "STYLE: Tilt Shift / Toy Photo",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.3.75",
@@ -3240,7 +3129,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 68,
+      "order": 67,
       "mode": 0,
       "inputs": [
         {
@@ -3321,43 +3210,6 @@
       ]
     },
     {
-      "id": 41,
-      "type": "PrimitiveStringMultiline",
-      "pos": [
-        -1990,
-        970
-      ],
-      "size": [
-        450,
-        180
-      ],
-      "flags": {
-        "pinned": true
-      },
-      "order": 26,
-      "mode": 2,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            423
-          ]
-        }
-      ],
-      "title": "STYLE: Lomography",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.75",
-        "Node name for S&R": "PrimitiveStringMultiline"
-      },
-      "widgets_values": [
-        "You are an adventurous analogue experimental photographer with 35 mm gear loaded with saturated emulsions.  \n\nYour tastes encompass deliberately “imperfect” aesthetics with high chromatic aberration, long exposure motion blur, vignetting, soft focus, and experimental color tones.\n\n---  \nTake the following {$erotic} photograph {$with-adult-content}:\n{$@}\n"
-      ],
-      "shape": 1
-    },
-    {
       "id": 63,
       "type": "PrimitiveStringMultiline",
       "pos": [
@@ -3371,7 +3223,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 27,
+      "order": 23,
       "mode": 2,
       "inputs": [],
       "outputs": [
@@ -3560,7 +3412,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 66,
+      "order": 65,
       "mode": 0,
       "inputs": [
         {
@@ -3634,10 +3486,121 @@
         "Node name for S&R": "Display Any (rgthree)"
       },
       "widgets_values": [
-        "You are a contemporary pop‑art artist who thrives on vibrant, oversaturated palettes and graphic with high‑energy compositions.\n\nYour tastes encompass bold and exaggerated colors with unconventional imagery that takes image composition to limits beyond the ordinary.\n\nCreate the following image:\nThe image shows a woman lying on her side on a bed with a blue-gray bedsheet. She has long, dark hair pulled back into a high ponytail secured with a black hair tie. She is wearing a light gray sleeveless tank top and a sheer, high-waisted white undergarment that extends to mid-thigh. Her body is prominently displayed, with a large, rounded abdomen and full thighs resting on the bed. The bed features a white pillow with the handwritten text \"SIN\" in black marker and a small black heart symbol. Scattered around her are crumpled white tissues, an open red box of tissues, and a few white cotton balls. In the background, there is a small wooden desk with a small religious statue placed on it, alongside a stack of books on a shelf. The room is softly lit."
+        "You are an amateur documentary photographer taking low quality photos.\n\nYour tastes encompass sharp backgrounds with large depth of field, unpolished realism with natural lighting, and candid friendship‑level moments that feel immediate and authentic. \n\n--- \nTake the following photograph: \nA young nurse stands beside a blue demon in a hospital, her expression one of surprise and her eyes wide. She has fair, smooth skin and long, blue hair. She wears a form-fitting, sleeveless black and red dress with distinctive red trim that accentuates her figure. The blue demon, with a fierce expression, has long, pointed red horns and sharp teeth. He wears a loose, red and black robe, and with one hand, he firmly grasps the nurse's waist, pulling her toward him. The atmosphere of the image is dark and mysterious, with the nurse and the demon standing out against the backdrop of a hospital.\n"
       ],
       "color": "#323",
       "bgcolor": "#535"
+    },
+    {
+      "id": 45,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1990,
+        2730
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 24,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            410
+          ]
+        }
+      ],
+      "title": "STYLE: Neon City Photo",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "You are an amateur filmmaker who captures violent scenes with a shallow depth of field.  \nYour tastes encompass neon‑saturated, atmospheric shots that emphasize intense red, green, blue colors, glowing signage, and selective focus.\n---\nTake the following photograph:\n{$@}\n"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 43,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1990,
+        1630
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 25,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            402
+          ]
+        }
+      ],
+      "title": "STYLE: Minimalist Photo",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "You are a contemporary visual artist who prefers shooting with a full‑frame mirrorless camera, at a wide aperture to highlight negative space.  \nYour tastes encompass clean, minimalist compositions that emphasize empty space while removing any distracting elements.\n---\nTake the following photograph:\n{$@}"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 93,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1990,
+        2290
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 26,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            414
+          ]
+        }
+      ],
+      "title": "STYLE: Pop Photo",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "You are a contemporary pop‑art photographer who thrives on vibrant, oversaturated palettes and graphic with high‑energy compositions.\n\nYour tastes encompass bold and exaggerated colors with unconventional imagery that takes image composition to limits beyond the ordinary.\n\nTake the following photograph:\n{$@}"
+      ],
+      "shape": 1
     },
     {
       "id": 57,
@@ -3653,7 +3616,7 @@
       "flags": {
         "pinned": true
       },
-      "order": 28,
+      "order": 27,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3674,18 +3637,55 @@
         "Run widget replace on values": false
       },
       "widgets_values": [
-        "The image shows a woman lying on her side on a bed with a blue-gray bedsheet. She has long, dark hair pulled back into a high ponytail secured with a black hair tie. She is wearing a light gray sleeveless tank top and a sheer, high-waisted white undergarment that extends to mid-thigh. Her body is prominently displayed, with a large, rounded abdomen and full thighs resting on the bed. The bed features a white pillow with the handwritten text \"SIN\" in black marker and a small black heart symbol. Scattered around her are crumpled white tissues, an open red box of tissues, and a few white cotton balls. In the background, there is a small wooden desk with a small religious statue placed on it, alongside a stack of books on a shelf. The room is softly lit."
+        "A young nurse stands beside a blue demon in a hospital, her expression one of surprise and her eyes wide. She has fair, smooth skin and long, blue hair. She wears a form-fitting, sleeveless black and red dress with distinctive red trim that accentuates her figure. The blue demon, with a fierce expression, has long, pointed red horns and sharp teeth. He wears a loose, red and black robe, and with one hand, he firmly grasps the nurse's waist, pulling her toward him. The atmosphere of the image is dark and mysterious, with the nurse and the demon standing out against the backdrop of a hospital."
       ],
       "color": "#232",
       "bgcolor": "#353",
       "shape": 1
     },
     {
-      "id": 93,
+      "id": 47,
       "type": "PrimitiveStringMultiline",
       "pos": [
         -1990,
-        2290
+        90
+      ],
+      "size": [
+        450,
+        180
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 28,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            382
+          ]
+        }
+      ],
+      "title": "STYLE: Cinematic",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "You are a Hollywood filmmaker making a high-budget film.\n\nYour tastes encompass atmospheric shots that emphasize intense emotions using selective focus, and warm and cold colors with high quality studio lighting.\n---\nCreate the following movie shot:\n{$@}"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 41,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1990,
+        970
       ],
       "size": [
         450,
@@ -3695,25 +3695,25 @@
         "pinned": true
       },
       "order": 29,
-      "mode": 0,
+      "mode": 2,
       "inputs": [],
       "outputs": [
         {
           "name": "STRING",
           "type": "STRING",
           "links": [
-            414
+            423
           ]
         }
       ],
-      "title": "STYLE: Pop Photo",
+      "title": "STYLE: Lomography",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.3.75",
         "Node name for S&R": "PrimitiveStringMultiline"
       },
       "widgets_values": [
-        "You are a contemporary pop‑art artist who thrives on vibrant, oversaturated palettes and graphic with high‑energy compositions.\n\nYour tastes encompass bold and exaggerated colors with unconventional imagery that takes image composition to limits beyond the ordinary.\n\nCreate the following image:\n{$@}"
+        "You are an adventurous experimental photographer exploring the world through a lomographic lens.\n\nYour tastes encompass chromatic aberration, film grain, colorful lens flares, soft focus with motion blur, and analog filter effects, always trying to capture emotions.\n---  \nTake the following {$erotic} photograph {$with-adult-content}:\n{$@}"
       ],
       "shape": 1
     }
@@ -4652,10 +4652,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.3261900471642985,
+      "scale": 0.8460529753920661,
       "offset": [
-        1649.4811303493855,
-        163.3200782657594
+        -939.8034761421222,
+        -451.7742802196652
       ]
     },
     "frontendVersion": "1.32.10"
